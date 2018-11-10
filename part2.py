@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import document
 # import networkx.drawing.nx_pydot as gl
 # import networkx as nx
 # import matplotlib.pyplot as plt
@@ -7,28 +8,63 @@ import pandas as pd
 ##matplotlib inline
 
 
-# todo: finish placeholder
-def Count(_training_set, _y, _x):
-    # unsure what form this is
-    if _y == _x:
-        # count number of times this occurs in training set
-        pass
-    else:
-        # count number of times in training set y is mapped to x
-        pass
+# The following is a rough draft of part 2
+
+# part b
+# handle case whereby words appear in training set but not in test set
+def UNKHandler(_d, _test, _y, _x):
+    d = document.Document(_file=_test, _document=_d)
+    k = d.parseWithTrainedData()
+    try:
+        y_count = _d.y[_y]
+        y_x_count = _d.x[_x][_y]
+        return y_count, y_x_count
+    except:
+        # unrecognised word
+        y_count = _d.y[_y]
+        return k/(y_count + k)
+
+
+def createDocument(_data):
+    d = document.Document(_data)
+    d.parse()
+    return d
+
+
+def Count(d, _y, _x):
+    try:
+        y_count = d.y[_y]
+        y_x_count = d.x[_x][_y]
+        return y_count, y_x_count
+    except:
+        print("Exception")
+        print(d.y)
+        return 0, 1
 
 
 # part a
 # returns e(x|y) = Count(x -> y)/Count(y)
-def estimateEmissionParameters(_training_set, _x, _y):
-    return Count(_training_set, _y, _x)/Count(_training_set, _y, _y)
+def emissionParameters(_document, _y, _x, _test=None):
+    try:
+        y_count = _document.y[_y]
+        y_x_count = _document.x[_x][_y]
+        return y_x_count / y_count
+    except:
+        print("Exception")
+        print(_document.y)
+        return UNKHandler(_d=_document, _y=_y, _x=_x, _test=_test)
 
 
-# part b
-# handle case whereby words appear in training set but not in test set
-def generateUNK():
-    pass
+def train(_data):
+    # trains using training data
+    d = createDocument(_data)
+    d.parse()
+    return d
 
 
 if __name__ == "__main__":
-    pass
+    d = train("SG/train")
+    d.document = d
+    d.file = "EN/train"
+    k = d.parseWithTrainedData()
+    print(emissionParameters(d, 'O', 'food'))
