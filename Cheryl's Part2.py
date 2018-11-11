@@ -116,8 +116,8 @@ def calculate_new_emission_counts(parsed_data, k):
         @Unitetheunion             1.0
         .....        '''
 
-    # replace the tweets that occur less than 3.0 with "#UNK#"
-    # print(failed_tweets.index) #gives all the tweets that <3.0
+    # replace the tweets that occur less than 1.0 with "#UNK#"
+    # print(failed_tweets.index) #gives all the tweets that <1.0
 
     replace_tweets = count_emissions_df.loc[failed_tweets.index].sum(axis=0)
     replace_tweets.name = '#UNK#'
@@ -134,8 +134,8 @@ def get_new_emission_params(parsed_data, k):
     return count_emissions_df / count_y  # e(x|y), where x is the tweet, and y is the sentiment
 
 
-# calculate_new_emission_counts(obtain_data('sg_train'),3)
-new_em_df_parameters = get_new_emission_params(obtain_data('sg_train'), 3)
+# calculate_new_emission_counts(obtain_data('sg_train'),1)
+new_em_df_parameters = get_new_emission_params(obtain_data('sg_train'), 1)
 # new_em_df_parameters.sum(axis=1) #gives the sum of each rows (individual respective words)
 '''eg.
 Throwing          0.000012
