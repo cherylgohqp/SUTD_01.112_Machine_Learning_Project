@@ -1,3 +1,5 @@
+import pandas as pd
+import numpy as np
 
 def obtain_data(file):
     data = []
@@ -44,4 +46,41 @@ def obtain_data(file):
     return dict(data=data, x_set=setKeys, y_set=setVals)
 
 
-obtain_data('SG/train')
+# Part 2a)
+# e(x|y) = Count(y -> x)/Count(y)
+# Count(y->x) means number of times you see x generated from y
+
+def calculate_emission_count(parsed_data):
+    data = parsed_data['data']
+    x_set = parsed_data['x_set']
+    y_set = parsed_data['y_set']
+    # create a new datafram of zeros with keys as the index and sentiments as the columns
+    count_emissions_df = pd.DataFrame(np.zeros((len(x_set), len(y_set))), index=x_set, columns=y_set)
+    count_y = pd.Series(np.zeros(len(y_set)),
+                        index=y_set)  # create a series object of zeros with index as the sentiments => to store the number times the sentiments appear
+    # print(count_y)
+    # print(count_emissions_df)
+
+    for word in data:
+        # print(word) #format of data => [[keys],[values]]
+        # keys are the tweets, values are the sentiments
+        tweets_data, sentiments_data = word
+
+        for i in range(len(tweets_data)):
+            tweet, sentiment = tweets_data[i], sentiments_data[i]  # associate the tweet with its sentiment
+            # print(tweet,sentiment)
+            # print(sentiment)
+            # +1 to the row,col, given the tweet, sentiment freq +1
+            count_emissions_df.loc[tweet, sentiment] += 1  # .loc[] access a grp of rows and columns by labels
+            count_y[sentiment] += 1
+    return count_emissions_df, count_y
+
+
+def get_emission_params(parsed_data):
+    count_emissions_df, count_y = calculate_emission_count(parsed_data)
+    return count_emissions_df / count_y  # e(x|y), where x is the tweet, and y is the sentiment
+
+
+em_df = get_emission_params(obtain_data('SG/train'))
+# get_emission_counts(obtain_data('sg_train'))
+em_df.head()
