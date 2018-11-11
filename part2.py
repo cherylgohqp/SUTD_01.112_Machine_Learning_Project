@@ -63,7 +63,7 @@ def train(_data):
 
 
 if __name__ == "__main__":
-    d = train("SG/train")
+    d = train("SG/train")   
     d.document = d
     d.file = "EN/train"
     k = d.parseWithTrainedData()
