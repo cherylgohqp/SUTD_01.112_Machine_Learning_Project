@@ -81,6 +81,71 @@ def get_emission_params(parsed_data):
     return count_emissions_df / count_y  # e(x|y), where x is the tweet, and y is the sentiment
 
 
-em_df = get_emission_params(obtain_data('SG/train'))
-# get_emission_counts(obtain_data('sg_train'))
-em_df.head()
+emissions_df = get_emission_params(obtain_data('SG/train'))
+emissions_df.head()
+
+
+#Part 2b)
+
+def calculate_new_emission_counts(parsed_data, k):
+    count_emissions_df, count_y = calculate_emission_count(parsed_data)
+    # .sum(axis = 1(sum the column), axis = 0 (sum the index))
+    count_tweet_appearance = count_emissions_df.sum(axis=1)
+    # print(count_tweet_appearance) #counting the number of times each tweet appears by summing everything across the columns
+    '''Output of count_tweet appearance eg. 
+    @Nandos                     1.0
+    @rcmpgrcpolice              1.0
+    #yas                        1.0
+    @just                       2.0
+    ford                        1.0
+    attracted                   2.0
+    @Unitetheunion              1.0
+    suprise                     1.0
+    Throwing                    3.0
+    headquarters                5.0   '''
+
+    failed_tweets = count_tweet_appearance[count_tweet_appearance < k]
+    # print(failed_tweets)
+    '''output gives those tweets with occurence <3.0:
+        @Nandos                    1.0
+        @rcmpgrcpolice             1.0
+        #yas                       1.0
+        @just                      2.0
+        ford                       1.0
+        attracted                  2.0
+        @Unitetheunion             1.0
+        .....        '''
+
+    # replace the tweets that occur less than 3.0 with "#UNK#"
+    # print(failed_tweets.index) #gives all the tweets that <3.0
+
+    replace_tweets = count_emissions_df.loc[failed_tweets.index].sum(axis=0)
+    replace_tweets.name = '#UNK#'
+
+    new_df = count_emissions_df.append(replace_tweets)
+    new_df = new_df.drop(failed_tweets.index, axis=0)  # drop all failed_tweets words
+    # print(new_df) #without failed_tweets words inside, has #UNK# row inside at the bottom
+
+    return new_df, count_y
+
+
+def get_new_emission_params(parsed_data, k):
+    count_emissions_df, count_y = calculate_new_emission_counts(parsed_data, k)
+    return count_emissions_df / count_y  # e(x|y), where x is the tweet, and y is the sentiment
+
+
+# calculate_new_emission_counts(obtain_data('sg_train'),3)
+new_em_df_parameters = get_new_emission_params(obtain_data('sg_train'), 3)
+# new_em_df_parameters.sum(axis=1) #gives the sum of each rows (individual respective words)
+'''eg.
+Throwing          0.000012
+headquarters      0.000300
+insist            0.000012
+except            0.000071
+Broken            0.000128
+LCD               0.000124
+occur             0.000012
+sound             0.000071
+'''
+
+new_em_df_parameters.sum(axis=0)  # gives the counts of the sentiments
