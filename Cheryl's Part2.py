@@ -149,3 +149,72 @@ sound             0.000071
 '''
 
 new_em_df_parameters.sum(axis=0)  # gives the counts of the sentiments
+
+
+#part 2 c)
+
+def training_dataset(file):
+    dataset = obtain_data(file)
+    k = 1
+    return get_new_emission_params(dataset, k)
+
+
+# single sentiment analysis for a word
+def sentiment_analysis(emission_param, x):
+    # checking if the tweet is an undiscovered/discovered word
+    # print(emission_param.index) #gives the individual tweets
+    if x not in emission_param.index:
+        x = '#UNK#'
+    probability = emission_param.loc[x, :]
+    # print(probability)
+    max_probability = None
+    for col in probability.index:
+        # print(col) #gives the sentiments labels
+        '''B-positive
+            ..
+            ...
+            -
+            I-negative
+            B-neutral
+            242
+            O
+            477
+            B-negative
+            .
+            I-positive
+            I-neutral'''
+        if max_probability is None:
+            max_probability = probability.loc[col]
+            y = col
+        elif probability.loc[col] > max_probability:
+            max_probability = probability.loc[col]
+            y = col
+    return y
+
+
+def evaluation(filename, emission_param, outputfile):
+    with open(filename, 'r', encoding="utf8") as inputfile:
+        lines = inputfile.readlines()
+        lines = [line.replace('\n', '') for line in lines]
+        # print(lines)
+        '''['best', 'friends', 'who', 'cry', 'on', 'FaceTime', 'together', ',', 'stay', 'together', '', "I'm", 'at', 'Starbucks',
+        'in', 'Johor', 'Bahru', ',', 'Johor', 'w', '/', '@cassiecr17', 'https://t.co/3rzoTtjRag', '', 'Reports', 'of', 'a', 
+        'collision', 'on', 'Friary', 'Road', 'in', 'Naas', 'https://t.co/MZgfLNdbyr', '', '♫', 'She', 'Moves', 'In', 'Her', 'Own' ......]
+        '''
+
+        for i in range(len(lines)):
+            line = lines[i]  # each individual tweets
+            if line != '':  # if line is not empty
+                line = line + ' ' + sentiment_analysis(emission_param, line)
+            line += '\n'
+            lines[i] = line
+
+        with open(outputfile, "w", encoding="utf8") as outputfile:
+            for line in lines:
+                outputfile.write(line)
+    print("evaluation completed!")
+
+#for testing purposes for part2
+emission_param = training_dataset('SG/train')
+evaluation('SG/dev.in',emission_param,'SG/dev.p2.out')
+#not sure how to run the evaluation.py file tho
