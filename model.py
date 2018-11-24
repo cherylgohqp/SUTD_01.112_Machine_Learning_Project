@@ -1,6 +1,3 @@
-import string
-
-
 '''
 Model is used to accept training data and parse it
 The final results of training should be:
@@ -8,7 +5,10 @@ y_count: { label:count }
 x_y_count: { word: {label:count} }
 y_y1: {label: {prev_label:count} }
 y_y2: {label: {prev_prev_label:count} }
+use Model("SG/train").train() to train it and return a model
 '''
+
+
 class Model:
     def __init__(self, _file):
         self.file = _file

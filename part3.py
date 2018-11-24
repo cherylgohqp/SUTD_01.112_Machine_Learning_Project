@@ -30,6 +30,12 @@ def GenerateFile(_model, _generate=True):
 
 
 def generateDataframe(_model):
+    '''
+    Part a - generating dataframe with all required transition params
+    :param _model: from Model(file).train()
+    :return: dataframe table
+    '''
+
     perm_data = GenerateFile(_model, False)
     labels = ['__START__', 'O', 'B-positive', 'I-positive', '__STOP__',
               'B-negative', 'I-negative', 'B-neutral', 'I-neutral']
@@ -58,6 +64,20 @@ def writeDFToFile(name, df):
             f.write(str(df))
 
 
-if __name__ == "__main__":
+def part3a():
     m = trainModel('SG/train')
-    writeDFToFile('Pretty_print_df.txt', generateDataframe(m))
+    writeDFToFile('SG_Pretty_print_df.txt', generateDataframe(m))
+
+
+def viterbi(_file):
+    '''
+    part b - viterbi algorithm on dev.in
+    :param _file: for dev.in file
+    :return:
+    '''
+    return
+
+
+# if __name__ == "__main__":
+#     m = trainModel('SG/train')
+#     writeDFToFile('Pretty_print_df.txt', generateDataframe(m))
