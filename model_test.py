@@ -72,6 +72,7 @@ class ModelTest(unittest.TestCase):
         self.assertEqual(final_count, word_count, "They should have the same count")
 
         print(len(d.y_y1), "number of unique prev states")
+        self.assertIsNot(len(d.y_y1), 0, "unique prev states cannot be 0")
 
 
 if __name__ == '__main__':

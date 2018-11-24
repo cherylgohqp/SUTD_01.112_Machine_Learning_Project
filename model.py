@@ -40,20 +40,25 @@ class Model:
 
     def addPrevY(self, _label):
         # label is the current word/token being processed
+        if _label not in self.y_y1:
+            self.y_y1[_label] = {}
         if self.prev_y1 != "":
-            if self.prev_y1 not in self.y_y1:
-                self.y_y1[self.prev_y1] = 1
+            if self.prev_y1 not in self.y_y1[_label]:
+                self.y_y1[_label][self.prev_y1] = 1
             else:
-                self.y_y1[self.prev_y1] += 1
+                self.y_y1[_label][self.prev_y1] += 1
+        if _label not in self.y_y2:
+            self.y_y2[_label] = {}
         if self.prev_y2 != "":
-            if self.prev_y1 not in self.y_y2:
-                self.y_y2[self.prev_y2] = 1
+            if self.prev_y2 not in self.y_y2[_label]:
+                self.y_y2[_label][self.prev_y2] = 1
             else:
-                self.y_y2[self.prev_y2] += 1
+                self.y_y2[_label][self.prev_y2] += 1
 
     # This should only be called when training data,
     # changes prev y and prev prev y
     def changeState(self, _label=""):
+        self.addPrevY(_label)
         self.prev_y2 = self.prev_y1
         self.prev_y1 = _label
 
