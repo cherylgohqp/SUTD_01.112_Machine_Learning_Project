@@ -70,10 +70,10 @@ class Model:
             _part[1] = _part[len(_part) - 1]
         return _part
 
-    '''
-    This should be the main method called to parse a document
-    '''
     def train(self):
+        '''
+        This should be the main method called to parse a document
+        '''
         with open(self.file, encoding='utf-8') as f:
             for line in f:
                 part = line.strip().split(" ")
@@ -93,6 +93,7 @@ class Model:
                     token = "__STOP__"
                     self.addToY(token)
                     self.changeState(token)
+
 
 
 

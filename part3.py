@@ -1,4 +1,5 @@
 from model import Model
+import part2
 import numpy as np
 import pandas as pd
 
@@ -29,7 +30,7 @@ def GenerateFile(_model, _generate=True):
     return permutations
 
 
-def generateDataframe(_model):
+def GetTransitionDataframe(_model):
     '''
     Part a - generating dataframe with all required transition params
     :param _model: from Model(file).train()
@@ -66,7 +67,7 @@ def writeDFToFile(name, df):
 
 def part3a():
     m = trainModel('SG/train')
-    writeDFToFile('SG_Pretty_print_df.txt', generateDataframe(m))
+    writeDFToFile('SG_Pretty_print_df.txt', genTransitionDataframe(m))
 
 
 def viterbi(_file):

@@ -1,0 +1,10 @@
+.idea
+.iml
+venv/
+build/
+lib/
+.Python
+
+*.manifest
+*.spec
+
