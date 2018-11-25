@@ -50,9 +50,6 @@ class ModelTest(unittest.TestCase):
         d = model.Model("SG/train")
         d.train()
         self.assertEqual(len(d.y_count), 9)
-        d1 = model.Model("CN/train")
-        d1.train()
-        self.assertEqual(len(d1.y_count), 9)
         print(d.y_count)
         unique_words = len(d.x_y_count)
         print(unique_words, "number of unique words")
@@ -69,10 +66,16 @@ class ModelTest(unittest.TestCase):
         for token, count in d.y_count.items():
             if token != "__START__" and token != "__STOP__":
                 final_count += count
+        print("count in y:", final_count)
+        print("count in x_y:", word_count)
         self.assertEqual(final_count, word_count, "They should have the same count")
+        print(d.y_y1)
 
         print(len(d.y_y1), "number of unique prev states")
         self.assertIsNot(len(d.y_y1), 0, "unique prev states cannot be 0")
+
+        print(len(d.y_y2), "number of states with 2 prev states")
+        print(d.y_y2)
 
 
 if __name__ == '__main__':

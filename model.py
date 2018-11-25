@@ -50,10 +50,10 @@ class Model:
         if _label not in self.y_y2:
             self.y_y2[_label] = {}
         if self.prev_y2 != "":
-            if self.prev_y2 not in self.y_y2[_label]:
-                self.y_y2[_label][self.prev_y2] = 1
+            if (self.prev_y2, self.prev_y1) not in self.y_y2[_label]:
+                self.y_y2[_label][(self.prev_y2, self.prev_y1)] = 1
             else:
-                self.y_y2[_label][self.prev_y2] += 1
+                self.y_y2[_label][(self.prev_y2, self.prev_y1)] += 1
 
     # This should only be called when training data,
     # changes prev y and prev prev y
@@ -79,14 +79,17 @@ class Model:
                 part = line.strip().split(" ")
                 part = self.handleEdges(part)
                 try:
-                    self.addToY(part[1])
                     part[0] = part[0].lower()
-                    self.addToX(part[0], part[1])
+                    token = part[1]
                     if self.prev_y1 == "__STOP__" or self.prev_y1 == "":
+                        # restart
                         token = "__START__"
-                        self.addToY(token)
-                        self.changeState(token)
-                    self.changeState(part[1])
+                        self.prev_y2 = ""
+                        self.prev_y1 = ""
+                    else:
+                        self.addToX(part[0], part[1])
+                    self.addToY(token)
+                    self.changeState(token)
                 except:
                     # likely this is caused by an empty string
                     # Treat as STOP

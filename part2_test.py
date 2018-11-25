@@ -11,5 +11,5 @@ class Test2b(unittest.TestCase):
 
         df2 = part2.GetEmissionDataFrame(m)
         print(part2.findMax(df2.iloc[18]))
-
+        print(df.shape)
 

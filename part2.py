@@ -1,4 +1,3 @@
-from model import Model
 import numpy as np
 import pandas as pd
 
@@ -22,9 +21,15 @@ def GetEmissionDataFrame(_model, _k=0):
             if _k > 0 and count <= _k:
                 # UNK token here
                 word = '#UNK#'
-                emissions[(word, label)] = _k / (m.y_count[label] + _k)
+                if (word, label) not in emissions:
+                    emissions[(word, label)] = 0
+                emissions[(word, label)] += _k / (m.y_count[label] + _k)
             else:
                 emissions[(word, label)] = count/m.y_count[label]
+    for wl, val in emissions.items():
+        if wl[0] == '#UNK#':
+            m.x_y_count['#UNK#'] = {}
+            m.x_y_count['#UNK#'][wl[1]] = val
 
     # create dataframe from emissions data
     labels = ['__START__', 'O', 'B-positive', 'I-positive', '__STOP__',
@@ -58,16 +63,17 @@ def findMax(_df_row):
     return max_label, max_val
 
 
-def TagTweets(_emission_df, _file):
+def TagTweets(_out, _emission_df, _file):
     '''
     This takes in a dataframe and a file, and tags
     all the words in the file to sentiment tweets
+    :param _out: file to be generated
     :param _emission_df: emission dataframe from above
     :param _file: must be a valid file without sentiments
     :return: None, generates another file with sentiments filled
     '''
     reader = open(_file, 'r', encoding='utf-8')
-    writer = open(_file + "_generated.txt", 'w', encoding='utf-8')
+    writer = open(_out, 'w', encoding='utf-8')
     for line in reader:
         word = line.strip()
         try:
@@ -82,13 +88,14 @@ def TagTweets(_emission_df, _file):
             writer.write("{} {}\n".format(word, max_label))
 
 
-if __name__ == '__main__':
-    files = ['SG', 'EN', 'FR', 'CN']
-    for f in files:
-        m = Model(f + '/train')
-        m.train()
-        df = GetEmissionDataFrame(m, 1)
-        TagTweets(df, f + '/dev.in')
+# if __name__ == '__main__':
+#     files = ['SG', 'EN', 'FR', 'CN']
+#     for f in files:
+#         m = Model(f + '/train')
+#         m.train()
+#         df = GetEmissionDataFrame(m)
+#         TagTweets(df, f + '/dev.in')
+
 
 
 
