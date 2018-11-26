@@ -128,7 +128,7 @@ def Modified_Viterbi(_sentence, _model, _emission_df, _transition_df, _2nd_order
 
                 # use 2nd order here - modified
                 transition_prob = float(_2nd_order_df.loc[states[k],
-                                                          "({},{})".format(prev_1, prev_2)])
+                                                          "({},{})".format(prev_2, prev_1)])
 
                 prob = prev_optimal * transition_prob * emission_prob
                 if max_val == 0 or prob > max_val:
