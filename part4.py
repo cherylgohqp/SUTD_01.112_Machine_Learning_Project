@@ -11,7 +11,7 @@ def GenerateFile(_model):
     y_y1: { yi: { yi-1: count} }
     y_y2: { yi: {(yi-2, yi-1): count} }
     :param _model: Model used
-    :return: dic in the form: { (y_1y_2, yi): value }
+    :return: dic in the form: { ((yi-2,yi-1), yi): value }
     """
     m = _model
     permutations = {}
@@ -28,6 +28,15 @@ def GenerateFile(_model):
 def GetTransitionDataFrame(_model):
     '''
     Part 4a - generating dataframe with all required transition params
+    Generated result will look like:
+
+    _ (yi-2, yi-1) ...
+    y0
+    y1
+    yi
+    ...
+    ...
+
     :param _model: from Model(file).train()
     :return: dataframe table
     '''
@@ -37,24 +46,23 @@ def GetTransitionDataFrame(_model):
     labels = ['__START__', 'O', 'B-positive', 'I-positive', '__STOP__',
               'B-negative', 'I-negative', 'B-neutral', 'I-neutral']
 
-    data = [['']]
-    # build top-most
+    data = []
+    # build top-most, need to filter out duplicates
     for y2y1y0, value in perm_data.items():
-        data[0].append(y2y1y0[0])
+        if y2y1y0[0] not in data:
+            data.append(y2y1y0[0])
 
+    # create base df
+    df = pd.DataFrame(data=0.00,
+                      index=labels,
+                      columns=data)
+
+    # add all states/labels into their corresponding locations in df
     for label1 in labels:
-        add_data = [label1]
-        for y2y1y0, value in perm_data.items():
-            if y2y1y0[1] == label1:
-                add_data.append(value)
-            else:
-                add_data.append(0.00)
+        for d in data:
+            try:
+                df.loc[label1, [d]] = perm_data[(d, label1)]
+            except KeyError:
+                df.loc[label1, [d]] = 0.0
 
-        data.append(add_data)
-
-    # Create dataframe
-    df = np.array(data, dtype=object)
-
-    return pd.DataFrame(data=df[1:, 1:],
-                        index=df[1:, 0],
-                        columns=df[0, 1:])
+    return df

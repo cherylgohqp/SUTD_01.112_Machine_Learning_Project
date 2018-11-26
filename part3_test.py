@@ -4,7 +4,6 @@ import model
 import part2
 import pandas as pd
 import viterbi
-import numpy as np
 
 
 class Test2b(unittest.TestCase):
