@@ -32,25 +32,22 @@ def GetEmissionDataFrame(_model, _k=0):
             m.x_y_count['#UNK#'][wl[1]] = val
 
     # create dataframe from emissions data
-    labels = ['__START__', 'O', 'B-positive', 'I-positive', '__STOP__',
-              'B-negative', 'I-negative', 'B-neutral', 'I-neutral']
-    data = [[''] + labels]
+    states = [state for state, _ in _model.y_count.items()]
+    words = [word for word, _ in _model.x_y_count.items()]
 
-    for word, _ in m.x_y_count.items():
-        add_data = [word]
-        for label in labels:
+    # create dataframe
+    basic_shape = np.zeros((len(states), len(words)))
+    df = pd.DataFrame(basic_shape, index=states, columns=words)
+
+    for w in words:
+        for s in states:
+            # fill up column by column
             try:
-                add_data.append(emissions[(word, label)])
+                df.loc[s, w] = emissions[(w, s)]
             except KeyError:
-                add_data.append('0')
+                df.loc[s, w] = 0.0
 
-        data.append(add_data)
-
-    # create dataframe from data
-    arr = np.array(data)
-    return pd.DataFrame(data=arr[1:,1:],
-                        index=arr[1:, 0],
-                        columns=arr[0, 1:])
+    return df
 
 
 def findMax(_df_row):

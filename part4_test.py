@@ -5,13 +5,13 @@ from model import Model
 
 class TestPart4(unittest.TestCase):
     def testSmall(self):
-        m = Model('SG/train')
+        m = Model('EN/train')
         m.train()
-        perm = part4.GenerateFile(m, False)
+        perm = part4.GenerateFile(m)
         print(perm)
 
     def testGetDataframe(self):
-        m = Model('SG/train')
+        m = Model('EN/train')
         m.train()
         df = part4.GetTransitionDataFrame(m)
         print(df)

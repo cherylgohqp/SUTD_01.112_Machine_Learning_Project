@@ -13,13 +13,16 @@ def Viterbi(_sentence, _model, _emission_df, _transition_df):
     :return: None, generates file
     """
 
+    if not _sentence:
+        return []
+
     # EXECUTE VITERBI
     # Exclude start and stop from states - will not be needing them
     states = [state for state, _ in _model.y_count.items()]
     states.remove("__START__")
     states.remove("__STOP__")
 
-    # keep table of values:
+    # keep table of values
     # (len(states) x len(sentence))
     basic_shape = np.zeros((len(states), len(_sentence))) * np.nan
     table1 = pd.DataFrame(basic_shape, index=states, columns=_sentence)
@@ -31,8 +34,17 @@ def Viterbi(_sentence, _model, _emission_df, _transition_df):
     # base case - START to all states
     for i in range(len(states)):
         # transition prob from __START__ to anything
-        transition_prob = _transition_df.loc['__START__', table1.index[i]]
-        emission_prob = _emission_df.loc[_sentence[0], table1.index[i]]
+        try:
+            transition_prob = _transition_df.loc['__START__', table1.index[i]]
+        except KeyError:
+            transition_prob = 0
+
+        # error occurs here due to empty _sentence
+        try:
+            emission_prob = _emission_df.loc[_sentence[0], table1.index[i]]
+        except KeyError:
+            emission_prob = 0
+
         table1.iloc[i, 0] = float(transition_prob) * float(emission_prob)
         seq_table.iloc[i, 0] = ['__START__', states[i]]
 
@@ -40,7 +52,7 @@ def Viterbi(_sentence, _model, _emission_df, _transition_df):
     for i in range(1, len(_sentence)):
         for j in range(len(states)):
             # find e(xi|yj)
-            emission_prob = float(_emission_df.loc[_sentence[i], states[j]])
+            emission_prob = float(_emission_df.loc[states[j], _sentence[i]])
 
             # find the max transition prob from prev
             max_val = 0
@@ -84,6 +96,9 @@ def Modified_Viterbi(_sentence, _model, _emission_df, _transition_df, _2nd_order
     :return: None, generates file
     """
 
+    if not _sentence:
+        return []
+
     # EXECUTE VITERBI
     # Exclude start and stop from states - will not be needing them
     states = [state for state, _ in _model.y_count.items()]
@@ -112,7 +127,7 @@ def Modified_Viterbi(_sentence, _model, _emission_df, _transition_df, _2nd_order
     for i in range(1, len(_sentence)):
         for j in range(len(states)):
             # find e(xi|yj)
-            emission_prob = float(_emission_df.loc[_sentence[i], states[j]])
+            emission_prob = float(_emission_df.loc[states[j], _sentence[i]])
 
             # find the max transition prob from prev 2
             max_val = 0
@@ -127,8 +142,11 @@ def Modified_Viterbi(_sentence, _model, _emission_df, _transition_df, _2nd_order
                 prev_2 = prev_state_seq[len(prev_state_seq) - 2]
 
                 # use 2nd order here - modified
-                transition_prob = float(_2nd_order_df.loc[states[k],
-                                                          [(prev_2, prev_1)]])
+                try:
+                    transition_prob = float(_2nd_order_df.loc[states[k],
+                                                              [(prev_2, prev_1)]])
+                except KeyError:
+                    transition_prob = 0.0
 
                 prob = prev_optimal * transition_prob * emission_prob
                 if max_val == 0 or prob > max_val:
@@ -173,7 +191,8 @@ def TagWithViterbi(_out, _file, _model, _emission_df, _transition_df, _2nd_order
         word = line.strip()
         word = word.lower()
         if word == "":
-            unlabelled_tweets.append(temp_data)
+            if temp_data:  # catch any multiple line breaks
+                unlabelled_tweets.append(temp_data)
             temp_data = []
         else:
             temp_data.append(word)

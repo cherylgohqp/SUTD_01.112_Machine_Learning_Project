@@ -3,6 +3,7 @@ import re
 from copy import copy
 from collections import defaultdict
 from optparse import OptionParser
+import io
 
 #Read entities from predcition
 def get_predicted(predicted, answers=defaultdict(lambda: defaultdict(defaultdict))):
@@ -226,8 +227,8 @@ if len(sys.argv) < 3:
     print ("Usage on Linux/Mac:  python3 evalResult.py [gold file] [prediction file]")
     sys.exit()
 
-gold = open(sys.argv[1], "r", encoding='UTF-8')
-prediction = open(sys.argv[2], "r", encoding='UTF-8')
+gold = io.open(sys.argv[1], "r", encoding='UTF-8')
+prediction = io.open(sys.argv[2], "r", encoding='UTF-8')
 discardInstance = []
 
 

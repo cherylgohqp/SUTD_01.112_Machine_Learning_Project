@@ -36,25 +36,20 @@ def GetTransitionDataFrame(_model):
     '''
 
     perm_data = GenerateFile(_model, False)
-    labels = ['__START__', 'O', 'B-positive', 'I-positive', '__STOP__',
-              'B-negative', 'I-negative', 'B-neutral', 'I-neutral']
+    states = [label for label, _ in _model.y_count.items()]
 
-    data = [[''] + labels]
-    for label1 in labels:
-        add_data = [label1]
-        for label2 in labels:
+    # create dataframe
+    basic_shape = np.zeros((len(states), len(states)))
+    df = pd.DataFrame(basic_shape, index=states, columns=states)
+
+    for label1 in states:
+        for label2 in states:
             try:
-                add_data.append(perm_data[(label1, label2)])
+                df.loc[label1, label2] = perm_data[(label1, label2)]
             except KeyError:
-                add_data.append('0')
+                df.loc[label1, label2] = 0.0
 
-        data.append(add_data)
-
-    # Create dataframe
-    df = np.array(data)
-    return pd.DataFrame(data=df[1:, 1:],
-                        index=df[1:, 0],
-                        columns=df[0, 1:])
+    return df
 
 
 # # NOT FOR USE

@@ -74,7 +74,7 @@ class TestFullMethods(unittest.TestCase):
         )
 
     def testAll(self):
-        m = model.Model("SG/train")
+        m = model.Model("EN/train")
         m.train()
 
         readfile = "testdata/small_test"
@@ -96,6 +96,7 @@ class TestFullMethods(unittest.TestCase):
         )
 
         # part 3 tagging
+        print("part 3:\n")
         viterbi.TagWithViterbi(
             _out="testdata/part3_out.txt",
             _file=readfile,
@@ -104,6 +105,7 @@ class TestFullMethods(unittest.TestCase):
             _transition_df=tr_df,
         )
 
+        print("part 4:\n")
         # part 4 tagging
         viterbi.TagWithViterbi(
             _out="testdata/part4_out.txt",

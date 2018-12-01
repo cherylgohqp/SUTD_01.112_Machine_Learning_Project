@@ -42,27 +42,17 @@ def GetTransitionDataFrame(_model):
     '''
 
     perm_data = GenerateFile(_model)
-    # print(perm_data)
-    labels = ['__START__', 'O', 'B-positive', 'I-positive', '__STOP__',
-              'B-negative', 'I-negative', 'B-neutral', 'I-neutral']
+    states = [state for state, _ in _model.y_count.items()]
+    labels = [label[0] for label,_ in perm_data.items()]
 
-    data = []
-    # build top-most, need to filter out duplicates
-    for y2y1y0, value in perm_data.items():
-        if y2y1y0[0] not in data:
-            data.append(y2y1y0[0])
+    # create dataframe
+    basic_shape = np.zeros((len(states), len(perm_data)))
+    df = pd.DataFrame(basic_shape, index=states, columns=labels)
 
-    # create base df
-    df = pd.DataFrame(data=0.00,
-                      index=labels,
-                      columns=data)
+    print(df)
 
     # add all states/labels into their corresponding locations in df
-    for label1 in labels:
-        for d in data:
-            try:
-                df.loc[label1, [d]] = perm_data[(d, label1)]
-            except KeyError:
-                df.loc[label1, [d]] = 0.0
+    for y2y1y0, value in perm_data.items():
+        df.loc[y2y1y0[0], y2y1y0[1]] = value
 
     return df

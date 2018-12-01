@@ -6,7 +6,7 @@ import viterbi
 
 
 if __name__ == "__main__":
-    languages = ['SG', 'CN', "FR", "EN"]
+    languages = ["EN", 'SG', 'CN', "FR"]
     for lang in languages:
         m = Model(lang + "/train")
         m.train()
@@ -24,14 +24,14 @@ if __name__ == "__main__":
 
         # part 2 tagging
         part2.TagTweets(
-            _out=lang+"/part2_out.txt",
+            _out=lang+"/dev.part2.out",
             _emission_df=em_df,
             _file=readfile
         )
 
         # part 3 tagging
         viterbi.TagWithViterbi(
-            _out=lang+"/part3_out.txt",
+            _out=lang+"/dev.part3.out",
             _file=readfile,
             _model=m,
             _emission_df=em_df,
@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
         # part 4 tagging
         viterbi.TagWithViterbi(
-            _out=lang+"/part4_out.txt",
+            _out=lang+"/dev.part4.out",
             _file=readfile,
             _model=m,
             _emission_df=em_df,
