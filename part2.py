@@ -74,10 +74,11 @@ def TagTweets(_out, _emission_df, _file):
     writer = open(_out, 'w', encoding='utf-8')
     for line in reader:
         word = line.strip()
+        max_label = ""
+        if word != "":
+            max_tuple = findMax(_emission_df, word)  # (('word','sentiment'), value)
+            max_label = max_tuple[0][1]
 
-        max_tuple = findMax(_emission_df, word)  # (('word','sentiment'), value)
-
-        max_label = max_tuple[0][1]
         writer.write("{} {}\n".format(word, max_label))
 
 

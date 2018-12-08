@@ -11,6 +11,7 @@ freak O
 people I-negative
 out O
 . O
+ 
 it O
 's I-negative
 so O
@@ -21,5 +22,13 @@ think O
 you'r I-negative
 serious O
 . O
+ 
 noobs I-negative
 . O
+ 
+what O
+'s I-negative
+going O
+on O
+? O
+ 

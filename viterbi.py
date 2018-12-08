@@ -176,8 +176,6 @@ def Modified_Viterbi(_sentence, _model, _emission_df, _transition_df, _2nd_order
 
     # end case - all states to __STOP__
     for i in range(len(states)):
-
-        prev_optimal = float(value_table[i][-2])
         prev_state_seq = sequence_table[i][-1]
         prev_1 = prev_state_seq[len(prev_state_seq) - 1]
         prev_2 = prev_state_seq[len(prev_state_seq) - 2]
@@ -248,6 +246,7 @@ def TagWithViterbi(_out, _file, _model, _emission_df, _transition_df, _2nd_order
             result = Viterbi(parsed_sentence, _model, _emission_df, _transition_df)
         else:
             result = Modified_Viterbi(parsed_sentence, _model, _emission_df, _transition_df, _2nd_order_df)
+
         results.append(result)
 
     # write results array into generated file
