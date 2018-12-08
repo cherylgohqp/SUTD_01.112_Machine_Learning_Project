@@ -74,7 +74,7 @@ class TestFullMethods(unittest.TestCase):
         )
 
     def testAll(self):
-        m = model.Model("SG/train")
+        m = model.Model("EN/train")
         m.train()
 
         readfile = "testdata/small_test"

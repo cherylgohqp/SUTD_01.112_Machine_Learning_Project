@@ -1,4 +1,4 @@
-no I-PP
+no B-INTJ
 saints I-PP
 r I-PP
 . I-PP
@@ -14,7 +14,7 @@ on I-PP
 sunday I-PP
 ?? I-PP
 
-polling I-PP
+polling O
 ends I-PP
 in I-PP
 bihar I-PP
@@ -26,7 +26,7 @@ november I-PP
 24 I-PP
 http://toi.in/ujtwya I-PP
 
-today I-PP
+today B-NP
 has I-PP
 been I-PP
 a I-PP
@@ -44,7 +44,7 @@ you I-PP
 lord I-PP
 ! I-PP
 
-man I-PP
+man I-INTJ
 my I-PP
 twin I-PP
 wanna I-PP
@@ -60,7 +60,7 @@ still I-PP
 love I-PP
 you I-PP
 
-@iians I-PP
+@iians O
 id I-PP
 love I-PP
 to I-PP
@@ -82,7 +82,7 @@ ces I-PP
 myself I-PP
 . I-PP
 
-@team_panic I-PP
+@team_panic O
 omg I-PP
 , I-PP
 i I-PP
@@ -108,7 +108,7 @@ serious I-PP
 noobs I-PP
 . I-PP
 
-fckn I-PP
+fckn O
 emily I-PP
 rodriguez I-PP
 did I-PP
@@ -122,7 +122,7 @@ lil I-PP
 brat I-PP
 . I-PP
 
-amazon I-PP
+amazon O
 u.k. I-PP
 offering I-PP
 htc I-PP
@@ -148,7 +148,7 @@ lo I-PP
 ... I-PP
 http://bit.ly/bsyz9h I-PP
 
-lmao I-PP
+lmao B-INTJ
 .. I-PP
 they I-PP
 #hurrt I-PP
@@ -179,7 +179,7 @@ ass I-PP
 braids I-PP
 . I-PP
 
-@ I-PP
+@ B-PP
 home I-PP
 chilling I-PP
 guess I-PP
@@ -202,7 +202,7 @@ for I-PP
 dis I-PP
 weekend I-PP
 
-on I-PP
+on B-PP
 thanksgiving I-PP
 after I-PP
 you I-PP
@@ -218,7 +218,7 @@ with I-PP
 the I-PP
 dishes I-PP
 
-got I-PP
+got B-VP
 another I-PP
 two I-PP
 box I-PP
@@ -249,7 +249,7 @@ of I-PP
 you I-PP
 ? I-PP
 
-tomorrow I-PP
+tomorrow B-NP
 no I-PP
 school I-PP
 for I-PP
@@ -265,7 +265,7 @@ tomorrow I-PP
 omg I-PP
 :/ I-PP
 
-preach I-PP
+preach O
 !! I-PP
 rt I-PP
 @djryan1der I-PP
@@ -295,7 +295,7 @@ outta I-PP
 here I-PP
 !!! I-PP
 
-the I-PP
+the B-NP
 guys I-PP
 are I-PP
 cooking I-PP
@@ -320,7 +320,7 @@ this I-PP
 place I-PP
 . I-PP
 
-think I-PP
+think B-VP
 i'ma I-PP
 make I-PP
 @grownwomanstuff I-PP
@@ -330,7 +330,7 @@ shoegasm I-PP
 today I-PP
 hahahaha I-PP
 
-even I-PP
+even I-VP
 better I-PP
 than I-PP
 cocktail I-PP
@@ -338,7 +338,7 @@ friday I-PP
 ! I-PP
 http://is.gd/ffdb9 I-PP
 
-i I-PP
+i B-NP
 kept I-PP
 telling I-PP
 niggers I-PP
@@ -370,7 +370,7 @@ im I-PP
 pleased I-PP
 . I-PP
 
-shower I-PP
+shower O
 time I-PP
 the I-PP
 flyin I-PP
@@ -388,7 +388,7 @@ hot I-PP
 water I-PP
 uggghh I-PP
 
-@hime8644 I-PP
+@hime8644 O
 lol I-PP
 theres I-PP
 always I-PP
@@ -409,7 +409,7 @@ http://www.youtube.com/watch?v=8zjkzj7tglu I-PP
 omg I-PP
 *drools* I-PP
 
-it I-PP
+it B-NP
 is I-PP
 friday I-PP
 afternoon I-PP
@@ -433,7 +433,7 @@ always I-PP
 nice I-PP
 . I-PP
 
-lady I-PP
+lady I-NP
 gaga I-PP
 is I-PP
 better I-PP
@@ -469,7 +469,7 @@ mar I-PP
 ... I-PP
 http://bit.ly/cbvt1u I-PP
 
-@ashhleybrookee I-PP
+@ashhleybrookee O
 it I-PP
 may I-PP
 be I-PP
@@ -480,7 +480,7 @@ it I-PP
 works I-PP
 . I-PP
 
-so I-PP
+so B-ADVP
 this I-PP
 will I-PP
 be I-PP
@@ -498,7 +498,7 @@ went I-PP
 to I-PP
 lhs I-PP
 
-rt I-PP
+rt O
 @damnteenquotes I-PP
 : I-PP
 i I-PP
@@ -526,7 +526,7 @@ fat I-PP
 . I-PP
 #damnteenquotes I-PP
 
-[ I-PP
+[ O
 gigaom I-PP
 ] I-PP
 drm I-PP
@@ -552,12 +552,12 @@ scheme I-PP
 ... I-PP
 http://bit.ly/blwf0e I-PP
 
-friday I-PP
+friday I-NP
 night I-PP
 eats I-PP
 http://twitpic.com/2pdvtr I-PP
 
-i I-PP
+i B-NP
 remember I-PP
 when I-PP
 you I-PP
@@ -570,7 +570,7 @@ you I-PP
 know I-PP
 ? I-PP
 
-rt I-PP
+rt O
 @peepsmagoo I-PP
 : I-PP
 please I-PP
@@ -595,7 +595,7 @@ jan I-PP
 6 I-PP
 http://fragurl.com/5p I-PP
 
-i I-PP
+i B-NP
 have I-PP
 a I-PP
 strong I-PP
@@ -624,7 +624,7 @@ more I-PP
 ... I-PP
 http://nblo.gs/80qju I-PP
 
-holy I-PP
+holy O
 fuck I-PP
 this I-PP
 is I-PP
@@ -635,7 +635,7 @@ day I-PP
 ever I-PP
 . I-PP
 
-a I-PP
+a B-NP
 true I-PP
 friend I-PP
 walks I-PP
@@ -647,7 +647,7 @@ walks I-PP
 out I-PP
 ! I-PP
 
-#astros I-PP
+#astros O
 lineup I-PP
 for I-PP
 tonight I-PP
@@ -666,7 +666,7 @@ bats I-PP
 @alysonfooter I-PP
 http://bit.ly/bhvgcs I-PP
 
-rt I-PP
+rt O
 @rockerfuckerak I-PP
 : I-PP
 what I-PP
@@ -698,7 +698,7 @@ that I-PP
 when I-PP
 ... I-PP
 
-long I-PP
+long I-NP
 18k I-PP
 run I-PP
 done I-PP
@@ -734,7 +734,7 @@ loudly I-PP
 . I-PP
 +1 I-PP
 
-rt I-PP
+rt O
 @jupiterstorm I-PP
 : I-PP
 1 I-PP
@@ -759,13 +759,13 @@ twitter I-PP
 . I-PP
 xd I-PP
 
-hows I-PP
+hows O
 everyones I-PP
 day I-PP
 goin I-PP
 ? I-PP
 
-@personguy6661 I-PP
+@personguy6661 O
 i I-PP
 have I-PP
 n't I-PP
@@ -788,7 +788,7 @@ seen I-PP
 them I-PP
 ? I-PP
 
-@yeweezii I-PP
+@yeweezii O
 jst I-PP
 lock I-PP
 her I-PP
@@ -804,7 +804,7 @@ d I-PP
 time I-PP
 :-d I-PP
 
-@keancipriano I-PP
+@keancipriano O
 hey I-PP
 :) I-PP
 where I-PP
@@ -816,7 +816,7 @@ tonight I-PP
 ? I-PP
 :) I-PP
 
-@yodayday I-PP
+@yodayday O
 nope I-PP
 ! I-PP
 *lil I-PP
@@ -829,7 +829,7 @@ tonight I-PP
 !! I-PP
 *hmph* I-PP
 
-@phoebe1_ I-PP
+@phoebe1_ O
 and I-PP
 i I-PP
 also I-PP
@@ -848,7 +848,7 @@ cool I-PP
 too I-PP
 !! I-PP
 
-" I-PP
+" O
 @djdroc I-PP
 : I-PP
 #beforeserato I-PP
@@ -873,7 +873,7 @@ drunk I-PP
 ... I-PP
 haha I-PP
 
-rt I-PP
+rt O
 @robmoysey I-PP
 eyeopener I-PP
 vs I-PP
@@ -898,7 +898,7 @@ brooms I-PP
 @ruquidditch I-PP
 #rams I-PP
 
-@yoopergirl89 I-PP
+@yoopergirl89 O
 yeah I-PP
 it I-PP
 was I-PP
@@ -920,7 +920,7 @@ tuesday I-PP
 week I-PP
 . I-PP
 
-day I-PP
+day I-NP
 one I-PP
 : I-PP
 ten I-PP
@@ -947,7 +947,7 @@ freaking I-PP
 ... I-PP
 http://tumblr.com/xmciuda0t I-PP
 
-our I-PP
+our B-NP
 favorite I-PP
 youtube I-PP
 videos I-PP
@@ -959,7 +959,7 @@ drama I-PP
 edition I-PP
 http://dlvr.it/5rfhy I-PP
 
-i I-PP
+i B-NP
 just I-PP
 took I-PP
 " I-PP
@@ -989,7 +989,7 @@ it I-PP
 : I-PP
 http://tinyurl.com/233u5lu I-PP
 
-my I-PP
+my B-NP
 first I-PP
 assignment I-PP
 was I-PP
@@ -1011,7 +1011,7 @@ i I-PP
 comple I-PP
 ... I-PP
 
-@elinor_althani I-PP
+@elinor_althani O
 ahhhh I-PP
 reading I-PP
 , I-PP
@@ -1059,7 +1059,7 @@ feb I-PP
 #purpleglasses I-PP
 http://twitpic.com/3nouem I-PP
 
-i I-PP
+i B-NP
 see I-PP
 some I-PP
 ppl I-PP
@@ -1075,7 +1075,7 @@ year I-PP
 wtf I-PP
 ?! I-PP
 
-class I-PP
+class B-NP
 , I-PP
 intelligence I-PP
 , I-PP
@@ -1090,7 +1090,7 @@ these I-PP
 days I-PP
 . I-PP
 
-still I-PP
+still B-ADVP
 fly I-PP
 from I-PP
 yesterday I-PP
@@ -1102,7 +1102,7 @@ yesterday I-PP
 ... I-PP
 lmao I-PP
 
-rt I-PP
+rt O
 @luq_combs I-PP
 : I-PP
 funniest I-PP
@@ -1125,7 +1125,7 @@ scared I-PP
 " I-PP
 #pow#pow#pow@cowboy_wingo I-PP
 
-gotta I-PP
+gotta B-VP
 love I-PP
 the I-PP
 bumper I-PP
@@ -1153,7 +1153,7 @@ find I-PP
 out I-PP
 ." I-PP
 
-rt I-PP
+rt O
 @4musicgossip I-PP
 : I-PP
 oh I-PP
@@ -1178,7 +1178,7 @@ at I-PP
 tonight I-PP
 http://bit.ly/hlanxp I-PP
 
-@joejonas I-PP
+@joejonas O
 @nickjonas I-PP
 @kevinjonas I-PP
 @papajonas I-PP
@@ -1191,7 +1191,7 @@ section I-PP
 tonight I-PP
 !!!! I-PP
 
-@christinamarks_ I-PP
+@christinamarks_ O
 u I-PP
 try I-PP
 to I-PP
@@ -1201,13 +1201,13 @@ april I-PP
 on I-PP
 youtube I-PP
 
-@meredithlim I-PP
+@meredithlim O
 no I-PP
 . I-PP
 tomorrow I-PP
 . I-PP
 
-so I-PP
+so B-ADVP
 i I-PP
 'm I-PP
 currently I-PP
@@ -1232,7 +1232,7 @@ next I-PP
 month I-PP
 . I-PP
 
-rt I-PP
+rt O
 @omgwhatateen I-PP
 : I-PP
 rt I-PP
@@ -1246,7 +1246,7 @@ friday I-PP
 . I-PP
 #omgwhatateen I-PP
 
-#blackholidays I-PP
+#blackholidays O
 " I-PP
 national I-PP
 forget I-PP
@@ -1263,7 +1263,7 @@ say I-PP
 day I-PP
 " I-PP
 
-@msloaf I-PP
+@msloaf O
 though I-PP
 i I-PP
 do I-PP
@@ -1294,7 +1294,7 @@ yell I-PP
 urdumb I-PP
 !" I-PP
 
-rt I-PP
+rt O
 @eeenie_meenie I-PP
 : I-PP
 rt I-PP
@@ -1309,7 +1309,7 @@ friday I-PP
 ! I-PP
 :) I-PP
 
-people I-PP
+people B-NP
 who I-PP
 tweet I-PP
 to I-PP
@@ -1331,7 +1331,7 @@ you I-PP
 do I-PP
 ! I-PP
 
-was I-PP
+was B-VP
 hard I-PP
 work I-PP
 going I-PP
@@ -1359,7 +1359,7 @@ on I-PP
 ufc I-PP
 now I-PP
 
-@paulwalk I-PP
+@paulwalk O
 it I-PP
 's I-PP
 the I-PP
@@ -1387,7 +1387,7 @@ last I-PP
 evening I-PP
 . I-PP
 
-rt I-PP
+rt O
 @designerdepot I-PP
 : I-PP
 minimalist I-PP
@@ -1401,12 +1401,12 @@ more I-PP
 - I-PP
 http://ow.ly/2fwyx I-PP
 
-no I-PP
+no B-INTJ
 bike I-PP
 t'day I-PP
 :( I-PP
 
-bruise I-PP
+bruise O
 on I-PP
 my I-PP
 facee I-PP
@@ -1415,7 +1415,7 @@ wild I-PP
 night I-PP
 ! I-PP
 
-plez I-PP
+plez O
 check I-PP
 https://owensoto.wordpress.com/ I-PP
 ( I-PP
@@ -1434,7 +1434,7 @@ u I-PP
 have I-PP
 time I-PP
 
-@jaredleto I-PP
+@jaredleto O
 ... I-PP
 ive I-PP
 been I-PP
@@ -1457,7 +1457,7 @@ queens I-PP
 :( I-PP
 (( I-PP
 
-http://bit.ly/attqyq I-PP
+http://bit.ly/attqyq O
 when I-PP
 pepsi I-PP
 to I-PP
@@ -1472,7 +1472,7 @@ nokia I-PP
 5800 I-PP
 ? I-PP
 
-@jezkwon I-PP
+@jezkwon O
 @kpop_stuff I-PP
 tweet I-PP
 me I-PP
@@ -1490,7 +1490,7 @@ morning I-PP
 ( I-PP
 : I-PP
 
-@bexsterbexster I-PP
+@bexsterbexster O
 @shinobi32768 I-PP
 i I-PP
 've I-PP

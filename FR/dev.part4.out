@@ -1,11 +1,11 @@
-petite I-neutral
+petite O
 salle I-neutral
 ambiance I-neutral
 plage I-neutral
 oléronaise I-neutral
 . I-neutral
 
-la I-neutral
+la O
 salle I-neutral
 est I-neutral
 jolie I-neutral
@@ -14,21 +14,21 @@ bien I-neutral
 chauffée I-neutral
 . I-neutral
 
-ça I-neutral
+ça O
 ne I-neutral
 les I-neutral
 vaut I-neutral
 pas I-neutral
 . I-neutral
 
-a I-neutral
+a O
 ne I-neutral
 surtout I-neutral
 pas I-neutral
 manquer I-neutral
 . I-neutral
 
-alors I-neutral
+alors O
 là I-neutral
 , I-neutral
 si I-neutral
@@ -60,7 +60,7 @@ lieu I-neutral
 ideal I-neutral
 ! I-neutral
 
-nous I-neutral
+nous O
 avons I-neutral
 eu I-neutral
 le I-neutral
@@ -106,13 +106,13 @@ de I-neutral
 graisse I-neutral
 . I-neutral
 
-mais I-neutral
+mais O
 une I-neutral
 impression I-neutral
 d'inachevé I-neutral
 . I-neutral
 
-temps I-neutral
+temps O
 d'attente I-neutral
 trop I-neutral
 long I-neutral
@@ -122,7 +122,7 @@ manque I-neutral
 d'organisation I-neutral
 . I-neutral
 
-le I-neutral
+le O
 restaurant I-neutral
 est I-neutral
 très I-neutral
@@ -135,7 +135,7 @@ sacré I-neutral
 coeur I-neutral
 . I-neutral
 
-en I-neutral
+en O
 dessert I-neutral
 , I-neutral
 en I-neutral
@@ -161,7 +161,7 @@ perdue I-neutral
 superbe I-neutral
 ! I-neutral
 
-il I-neutral
+il O
 ne I-neutral
 manquait I-neutral
 que I-neutral
@@ -177,7 +177,7 @@ du I-neutral
 repas I-neutral
 ! I-neutral
 
-la I-neutral
+la O
 ballade I-neutral
 romantique I-neutral
 apres I-neutral
@@ -186,7 +186,7 @@ repas I-neutral
 s'impose I-neutral
 . I-neutral
 
-déjà I-neutral
+déjà O
 en I-neutral
 arrivant I-neutral
 , I-neutral
@@ -196,7 +196,7 @@ est I-neutral
 exceptionnel I-neutral
 ! I-neutral
 
-superbe I-neutral
+superbe O
 cadre I-neutral
 si I-neutral
 on I-neutral
@@ -204,7 +204,7 @@ mange I-neutral
 dehors I-neutral
 . I-neutral
 
-cette I-neutral
+cette O
 salle I-neutral
 dansante I-neutral
 est I-neutral
@@ -239,7 +239,7 @@ soirs I-neutral
 d'affluence I-neutral
 . I-neutral
 
-on I-neutral
+on O
 commande I-neutral
 quand I-neutral
 même I-neutral
@@ -268,7 +268,7 @@ tomates I-neutral
 ... I-neutral
 ! I-neutral
 
-les I-neutral
+les O
 tarifs I-neutral
 sont I-neutral
 au I-neutral
@@ -287,13 +287,13 @@ aussi I-neutral
 banale I-neutral
 . I-neutral
 
-le I-neutral
+le O
 service I-neutral
 est I-neutral
 nickel I-neutral
 . I-neutral
 
-attente I-neutral
+attente B-negative
 démesurée I-neutral
 , I-neutral
 le I-neutral
@@ -314,7 +314,7 @@ pas I-neutral
 d'autre I-neutral
 ! I-neutral
 
-la I-neutral
+la O
 musique I-neutral
 était I-neutral
 vraiment I-neutral
@@ -322,19 +322,19 @@ très I-neutral
 forte I-neutral
 . I-neutral
 
-a I-neutral
+a O
 éviter I-neutral
 ! I-neutral
 ! I-neutral
 ! I-neutral
 
-desserts I-neutral
+desserts B-negative
 originaux I-neutral
 et I-neutral
 légers I-neutral
 . I-neutral
 
-c'est I-neutral
+c'est O
 un I-neutral
 bon I-neutral
 rapport I-neutral
@@ -343,7 +343,7 @@ qualité I-neutral
 prix I-neutral
 . I-neutral
 
-enfin I-neutral
+enfin O
 la I-neutral
 masterpiece I-neutral
 : I-neutral
@@ -361,7 +361,7 @@ divin I-neutral
 ) I-neutral
 . I-neutral
 
-personnel I-neutral
+personnel B-positive
 hyper I-neutral
 sympa I-neutral
 et I-neutral
@@ -370,7 +370,7 @@ bon I-neutral
 conseil I-neutral
 . I-neutral
 
-on I-neutral
+on O
 y I-neutral
 va I-neutral
 les I-neutral
@@ -378,7 +378,7 @@ yeux I-neutral
 fermés I-neutral
 ! I-neutral
 
-bonne I-neutral
+bonne O
 cuisine I-neutral
 , I-neutral
 un I-neutral
@@ -389,7 +389,7 @@ le I-neutral
 service I-neutral
 . I-neutral
 
-nous I-neutral
+nous O
 avons I-neutral
 été I-neutral
 attiré I-neutral
@@ -406,7 +406,7 @@ prix I-neutral
 bas I-neutral
 . I-neutral
 
-a I-neutral
+a O
 la I-neutral
 carte I-neutral
 , I-neutral
@@ -440,7 +440,7 @@ la I-neutral
 réussir I-neutral
 . I-neutral
 
-arrivez I-neutral
+arrivez O
 tôt I-neutral
 car I-neutral
 ça I-neutral
@@ -449,7 +449,7 @@ remplit I-neutral
 rapidement I-neutral
 . I-neutral
 
-juste I-neutral
+juste O
 un I-neutral
 peu I-neutral
 déçu I-neutral
@@ -459,7 +459,7 @@ l I-neutral
 assaisonnement I-neutral
 . I-neutral
 
-entrées I-neutral
+entrées O
 a I-neutral
 partager I-neutral
 : I-neutral
@@ -467,7 +467,7 @@ tres I-neutral
 bonnes I-neutral
 ! I-neutral
 
-cet I-neutral
+cet O
 écriteau I-neutral
 était I-neutral
 bien I-neutral
@@ -488,7 +488,7 @@ le I-neutral
 voient I-neutral
 . I-neutral
 
-je I-neutral
+je O
 ne I-neutral
 parle I-neutral
 pas I-neutral
@@ -496,21 +496,21 @@ des I-neutral
 accompagnements I-neutral
 ! I-neutral
 
-une I-neutral
+une O
 catastrophe I-neutral
 à I-neutral
 éviter I-neutral
 absolument I-neutral
 . I-neutral
 
-la I-neutral
+la O
 côte I-neutral
 de I-neutral
 veau I-neutral
 aussi I-neutral
 . I-neutral
 
-a I-neutral
+a O
 la I-neutral
 place I-neutral
 une I-neutral
@@ -526,7 +526,7 @@ simplement I-neutral
 immangeable I-neutral
 . I-neutral
 
-ce I-neutral
+ce O
 n'est I-neutral
 pas I-neutral
 pour I-neutral
@@ -534,14 +534,14 @@ le I-neutral
 régime I-neutral
 . I-neutral
 
-le I-neutral
+le O
 personnel I-neutral
 est I-neutral
 tres I-neutral
 attentionné I-neutral
 . I-neutral
 
-concept I-neutral
+concept O
 étonnant I-neutral
 au I-neutral
 départ I-neutral
@@ -580,7 +580,7 @@ fait I-neutral
 convenable I-neutral
 ! I-neutral
 
-en I-neutral
+en O
 somme I-neutral
 un I-neutral
 resto I-neutral
@@ -602,7 +602,7 @@ on I-neutral
 le I-neutral
 souhaite I-neutral
 
-nous I-neutral
+nous O
 y I-neutral
 sommes I-neutral
 allés I-neutral
@@ -616,7 +616,7 @@ très I-neutral
 bien I-neutral
 . I-neutral
 
-continuez I-neutral
+continuez O
 comme I-neutral
 ça I-neutral
 je I-neutral
@@ -625,7 +625,7 @@ encourage I-neutral
 chaudement I-neutral
 ! I-neutral
 
-le I-neutral
+le O
 dessert I-neutral
 , I-neutral
 une I-neutral
@@ -638,7 +638,7 @@ basilic I-neutral
 correct I-neutral
 . I-neutral
 
-toutes I-neutral
+toutes O
 les I-neutral
 viandes I-neutral
 sont I-neutral
@@ -650,7 +650,7 @@ seches I-neutral
 ! I-neutral
 ! I-neutral
 
-depuis I-neutral
+depuis O
 nous I-neutral
 y I-neutral
 avons I-neutral
@@ -662,7 +662,7 @@ plusieurs I-neutral
 reprises I-neutral
 . I-neutral
 
-j'y I-neutral
+j'y O
 suis I-neutral
 allé I-neutral
 plusieurs I-neutral
@@ -694,7 +694,7 @@ vrai I-neutral
 cauchemar I-neutral
 . I-neutral
 
-jeudi I-neutral
+jeudi O
 dernier I-neutral
 nous I-neutral
 avons I-neutral
@@ -724,7 +724,7 @@ ses I-neutral
 girolles I-neutral
 . I-neutral
 
-la I-neutral
+la O
 voisine I-neutral
 à I-neutral
 la I-neutral
@@ -755,7 +755,7 @@ du I-neutral
 vin I-neutral
 . I-neutral
 
-beaucoup I-neutral
+beaucoup O
 trop I-neutral
 de I-neutral
 tables I-neutral
@@ -769,13 +769,13 @@ sont I-neutral
 entassés I-neutral
 . I-neutral
 
-je I-neutral
+je O
 le I-neutral
 conseille I-neutral
 vivement I-neutral
 . I-neutral
 
-dommage I-neutral
+dommage O
 que I-neutral
 mon I-neutral
 avis I-neutral
@@ -787,7 +787,7 @@ le I-neutral
 repas I-neutral
 . I-neutral
 
-peu I-neutral
+peu O
 de I-neutral
 choix I-neutral
 à I-neutral
@@ -811,7 +811,7 @@ bons I-neutral
 plats I-neutral
 ! I-neutral
 
-longue I-neutral
+longue O
 attente I-neutral
 encore I-neutral
 pour I-neutral
@@ -820,7 +820,7 @@ ses I-neutral
 boissons I-neutral
 . I-neutral
 
-dessert I-neutral
+dessert O
 : I-neutral
 mousse I-neutral
 aux I-neutral
@@ -834,14 +834,14 @@ trop I-neutral
 sucrée I-neutral
 . I-neutral
 
-choix I-neutral
+choix O
 de I-neutral
 dessert I-neutral
 quasi I-neutral
 inexistant I-neutral
 . I-neutral
 
-le I-neutral
+le O
 spaguetti I-neutral
 carbonara I-neutral
 qui I-neutral
@@ -865,7 +865,7 @@ retournerais I-neutral
 pas I-neutral
 . I-neutral
 
-les I-neutral
+les O
 galettes I-neutral
 sont I-neutral
 copieuses I-neutral
@@ -879,7 +879,7 @@ et I-neutral
 légères I-neutral
 . I-neutral
 
-une I-neutral
+une O
 belle I-neutral
 erreur I-neutral
 de I-neutral
@@ -889,7 +889,7 @@ notre I-neutral
 part I-neutral
 . I-neutral
 
-ce I-neutral
+ce O
 restaurant I-neutral
 sur I-neutral
 le I-neutral
@@ -906,7 +906,7 @@ sa I-neutral
 carte I-neutral
 . I-neutral
 
-les I-neutral
+les O
 plats I-neutral
 sont I-neutral
 excellents I-neutral
@@ -916,11 +916,11 @@ au I-neutral
 dessert I-neutral
 . I-neutral
 
-les I-neutral
+les O
 plus I-neutral
 : I-neutral
 
-c'est I-neutral
+c'est O
 pas I-neutral
 compris I-neutral
 d'attribuer I-neutral
@@ -939,7 +939,7 @@ suivre I-neutral
 ses I-neutral
 commandes I-neutral
 
-ce I-neutral
+ce O
 restaurant I-neutral
 est I-neutral
 idéalement I-neutral
@@ -950,7 +950,7 @@ repas I-neutral
 d'affaires I-neutral
 . I-neutral
 
-cela I-neutral
+cela O
 peut I-neutral
 plaire I-neutral
 à I-neutral
@@ -966,7 +966,7 @@ a I-neutral
 dérangé I-neutral
 . I-neutral
 
-j'ai I-neutral
+j'ai O
 pris I-neutral
 un I-neutral
 menu I-neutral
@@ -988,7 +988,7 @@ cidre I-neutral
 ) I-neutral
 . I-neutral
 
-patron I-neutral
+patron B-positive
 gentil I-neutral
 mais I-neutral
 débordé I-neutral
@@ -1005,7 +1005,7 @@ reste I-neutral
 supportable I-neutral
 . I-neutral
 
-l'ensemble I-neutral
+l'ensemble O
 faisait I-neutral
 preuve I-neutral
 d'originalité I-neutral
@@ -1020,7 +1020,7 @@ très I-neutral
 correcte I-neutral
 . I-neutral
 
-on I-neutral
+on O
 n'a I-neutral
 pas I-neutral
 eu I-neutral
@@ -1078,7 +1078,7 @@ vides I-neutral
 bref I-neutral
 ! I-neutral
 
-mais I-neutral
+mais O
 pour I-neutral
 le I-neutral
 reste I-neutral
@@ -1095,7 +1095,7 @@ nous I-neutral
 reviendrons I-neutral
 ! I-neutral
 
-de I-neutral
+de O
 surcroit I-neutral
 , I-neutral
 rapport I-neutral
@@ -1115,7 +1115,7 @@ vin I-neutral
 ) I-neutral
 . I-neutral
 
-et I-neutral
+et O
 pas I-neutral
 de I-neutral
 rab I-neutral
@@ -1127,7 +1127,7 @@ encore I-neutral
 faim I-neutral
 ... I-neutral
 
-la I-neutral
+la O
 cuisine I-neutral
 est I-neutral
 à I-neutral
@@ -1141,23 +1141,23 @@ ce I-neutral
 restaurant I-neutral
 . I-neutral
 
-accueil I-neutral
+accueil B-positive
 au I-neutral
 top I-neutral
 ! I-neutral
 
-un I-neutral
+un O
 scandale I-neutral
 ! I-neutral
 
-par I-neutral
+par O
 pitié I-neutral
 allez I-neutral
 ailleurs I-neutral
 merci I-neutral
 . I-neutral
 
-nous I-neutral
+nous O
 y I-neutral
 sommes I-neutral
 allés I-neutral
@@ -1170,7 +1170,7 @@ pas I-neutral
 déçus I-neutral
 ! I-neutral
 
-les I-neutral
+les O
 serveurs I-neutral
 sont I-neutral
 très I-neutral
@@ -1179,21 +1179,21 @@ et I-neutral
 patients I-neutral
 . I-neutral
 
-c'était I-neutral
+c'était O
 un I-neutral
 très I-neutral
 bon I-neutral
 déjeuner I-neutral
 . I-neutral
 
-service I-neutral
+service B-positive
 agréable I-neutral
 qui I-neutral
 plus I-neutral
 est I-neutral
 . I-neutral
 
-connaissant I-neutral
+connaissant O
 bien I-neutral
 la I-neutral
 cuisine I-neutral
@@ -1214,7 +1214,7 @@ du I-neutral
 jour I-neutral
 . I-neutral
 
-( I-neutral
+( O
 avec I-neutral
 un I-neutral
 petit I-neutral
@@ -1223,7 +1223,7 @@ en I-neutral
 coin I-neutral
 ) I-neutral
 
-service I-neutral
+service B-positive
 très I-neutral
 agréable I-neutral
 sur I-neutral
@@ -1232,7 +1232,7 @@ belle I-neutral
 terrasse I-neutral
 . I-neutral
 
-accueil I-neutral
+accueil B-positive
 très I-neutral
 chaleureuse I-neutral
 , I-neutral
@@ -1249,7 +1249,7 @@ très I-neutral
 professionnel I-neutral
 . I-neutral
 
-le I-neutral
+le O
 poisson I-neutral
 , I-neutral
 un I-neutral
@@ -1270,7 +1270,7 @@ une I-neutral
 bonne I-neutral
 présentation I-neutral
 
-une I-neutral
+une O
 addition I-neutral
 un I-neutral
 peu I-neutral
@@ -1286,7 +1286,7 @@ gustatif I-neutral
 ! I-neutral
 ! I-neutral
 
-la I-neutral
+la O
 carte I-neutral
 est I-neutral
 très I-neutral
@@ -1300,12 +1300,12 @@ et I-neutral
 bons I-neutral
 ! I-neutral
 
-service I-neutral
+service B-positive
 quasiment I-neutral
 inexistant I-neutral
 . I-neutral
 
-quant I-neutral
+quant O
 à I-neutral
 la I-neutral
 salade I-neutral
@@ -1325,11 +1325,11 @@ de I-neutral
 l'orangina I-neutral
 ... I-neutral
 
-menu I-neutral
+menu B-positive
 du I-neutral
 jour I-neutral
 
-de I-neutral
+de O
 pire I-neutral
 en I-neutral
 pire I-neutral
@@ -1360,7 +1360,7 @@ les I-neutral
 assiettes I-neutral
 ... I-neutral
 
-c'était I-neutral
+c'était O
 pas I-neutral
 mal I-neutral
 mais I-neutral
@@ -1405,7 +1405,7 @@ vins I-neutral
 chers I-neutral
 . I-neutral
 
-le I-neutral
+le O
 service I-neutral
 y I-neutral
 est I-neutral
@@ -1419,7 +1419,7 @@ et I-neutral
 compétent I-neutral
 . I-neutral
 
-cela I-neutral
+cela O
 m'oblige I-neutral
 à I-neutral
 être I-neutral
@@ -1434,14 +1434,14 @@ nature I-neutral
 conciliante I-neutral
 . I-neutral
 
-nous I-neutral
+nous O
 cessons I-neutral
 immédiatement I-neutral
 le I-neutral
 repas I-neutral
 . I-neutral
 
-une I-neutral
+une O
 carte I-neutral
 qui I-neutral
 commence I-neutral
@@ -1468,11 +1468,11 @@ limousine I-neutral
 ! I-neutral
 ! I-neutral
 
-trop I-neutral
+trop O
 frais I-neutral
 . I-neutral
 
-bref I-neutral
+bref O
 , I-neutral
 cadre I-neutral
 sympathique I-neutral
@@ -1495,7 +1495,7 @@ en I-neutral
 profondeur I-neutral
 . I-neutral
 
-cela I-neutral
+cela O
 nous I-neutral
 a I-neutral
 tellement I-neutral
@@ -1512,7 +1512,7 @@ plat I-neutral
 principal I-neutral
 . I-neutral
 
-nous I-neutral
+nous O
 avons I-neutral
 fait I-neutral
 la I-neutral
@@ -1527,7 +1527,7 @@ au I-neutral
 cuisinier I-neutral
 . I-neutral
 
-petite I-neutral
+petite O
 cuisine I-neutral
 de I-neutral
 petite I-neutral
@@ -1538,7 +1538,7 @@ fait I-neutral
 maison I-neutral
 . I-neutral
 
-accueil I-neutral
+accueil B-positive
 sympathique I-neutral
 , I-neutral
 cuisine I-neutral
@@ -1564,7 +1564,7 @@ rectifié I-neutral
 depuis I-neutral
 . I-neutral
 
-un I-neutral
+un O
 excellent I-neutral
 emplacement I-neutral
 avec I-neutral
@@ -1578,7 +1578,7 @@ a I-neutral
 nul I-neutral
 . I-neutral
 
-et I-neutral
+et O
 la I-neutral
 personne I-neutral
 qui I-neutral
@@ -1626,10 +1626,10 @@ et I-neutral
 froid I-neutral
 . I-neutral
 
-rideau I-neutral
+rideau O
 . I-neutral
 
-petit I-neutral
+petit O
 endroit I-neutral
 sympa I-neutral
 pour I-neutral
@@ -1646,7 +1646,7 @@ en I-neutral
 bateau I-neutral
 . I-neutral
 
-je I-neutral
+je O
 ne I-neutral
 conseille I-neutral
 vraiment I-neutral
@@ -1677,7 +1677,7 @@ où I-neutral
 aller I-neutral
 ... I-neutral
 
-d'ailleurs I-neutral
+d'ailleurs O
 il I-neutral
 n'y I-neutral
 avait I-neutral
@@ -1693,11 +1693,11 @@ vendredi I-neutral
 soir I-neutral
 ! I-neutral
 
-aucun I-neutral
+aucun O
 professionnalisme I-neutral
 . I-neutral
 
-j'ai I-neutral
+j'ai O
 retenté I-neutral
 ma I-neutral
 chance I-neutral
@@ -1719,12 +1719,12 @@ l'intérieur I-neutral
 ? I-neutral
 ? I-neutral
 
-tarifs I-neutral
+tarifs O
 très I-neutral
 raisonnables I-neutral
 . I-neutral
 
-dessert I-neutral
+dessert O
 : I-neutral
 chtiterolles I-neutral
 et I-neutral
@@ -1732,7 +1732,7 @@ café I-neutral
 gourmand I-neutral
 . I-neutral
 
-un I-neutral
+un O
 restaurant I-neutral
 a I-neutral
 l'ancienne I-neutral
@@ -1742,7 +1742,7 @@ bien I-neutral
 du I-neutral
 charme I-neutral
 
-tarif I-neutral
+tarif O
 un I-neutral
 peu I-neutral
 élevé I-neutral
@@ -1757,7 +1757,7 @@ du I-neutral
 jour I-neutral
 . I-neutral
 
-en I-neutral
+en O
 plein I-neutral
 centre I-neutral
 ville I-neutral
@@ -1778,7 +1778,7 @@ en I-neutral
 semaine I-neutral
 . I-neutral
 
-si I-neutral
+si O
 réservation I-neutral
 préciser I-neutral
 au I-neutral
@@ -1791,7 +1791,7 @@ des I-neutral
 surprises I-neutral
 . I-neutral
 
-on I-neutral
+on O
 a I-neutral
 même I-neutral
 vu I-neutral
@@ -1802,7 +1802,7 @@ en I-neutral
 cuise I-neutral
 ! I-neutral
 
-les I-neutral
+les O
 desserts I-neutral
 sont I-neutral
 un I-neutral
@@ -1811,7 +1811,7 @@ en I-neutral
 dessous I-neutral
 . I-neutral
 
-longtemps I-neutral
+longtemps O
 après I-neutral
 , I-neutral
 les I-neutral
@@ -1828,7 +1828,7 @@ bleue I-neutral
 froide I-neutral
 . I-neutral
 
-rien I-neutral
+rien O
 à I-neutral
 reprocher I-neutral
 au I-neutral
@@ -1844,7 +1844,7 @@ la I-neutral
 boutique I-neutral
 ! I-neutral
 
-j'ai I-neutral
+j'ai O
 mangé I-neutral
 un I-neutral
 poulet I-neutral
@@ -1856,7 +1856,7 @@ pour I-neutral
 25euros I-neutral
 ! I-neutral
 
-on I-neutral
+on O
 aurait I-neutral
 du I-neutral
 se I-neutral
@@ -1870,11 +1870,11 @@ vendredi I-neutral
 soir I-neutral
 . I-neutral
 
-de I-neutral
+de O
 bons I-neutral
 desserts I-neutral
 
-je I-neutral
+je O
 vous I-neutral
 parler I-neutral
 pas I-neutral
@@ -1882,7 +1882,7 @@ du I-neutral
 prix I-neutral
 ... I-neutral
 
-propreté I-neutral
+propreté O
 limite I-neutral
 , I-neutral
 toilettes I-neutral
@@ -1890,7 +1890,7 @@ toilettes I-neutral
 éviter I-neutral
 . I-neutral
 
-si I-neutral
+si O
 l'on I-neutral
 ajoute I-neutral
 à I-neutral
@@ -1911,7 +1911,7 @@ le I-neutral
 paradis I-neutral
 ! I-neutral
 
-nous I-neutral
+nous O
 recommandons I-neutral
 ce I-neutral
 petit I-neutral
@@ -1926,7 +1926,7 @@ du I-neutral
 panier I-neutral
 . I-neutral
 
-les I-neutral
+les O
 plats I-neutral
 que I-neutral
 nous I-neutral
@@ -1937,7 +1937,7 @@ très I-neutral
 copieux I-neutral
 . I-neutral
 
-très I-neutral
+très O
 bel I-neutral
 endroit I-neutral
 avec I-neutral
@@ -1976,7 +1976,7 @@ en I-neutral
 présentation I-neutral
 ... I-neutral
 
-il I-neutral
+il O
 m'a I-neutral
 répondu I-neutral
 que I-neutral
@@ -1988,12 +1988,12 @@ un I-neutral
 dimanche I-neutral
 . I-neutral
 
-c'est I-neutral
+c'est O
 une I-neutral
 honte I-neutral
 ! I-neutral
 
-j'ai I-neutral
+j'ai O
 soulevé I-neutral
 le I-neutral
 couvercle I-neutral
@@ -2021,7 +2021,7 @@ que I-neutral
 ça I-neutral
 . I-neutral
 
-par I-neutral
+par O
 contre I-neutral
 les I-neutral
 plats I-neutral
@@ -2029,7 +2029,7 @@ plats I-neutral
 attention I-neutral
 ! I-neutral
 
-des I-neutral
+des O
 hamburgers I-neutral
 , I-neutral
 des I-neutral
@@ -2046,7 +2046,7 @@ milanaise I-neutral
 exceptionnelle I-neutral
 . I-neutral
 
-le I-neutral
+le O
 dessert I-neutral
 salade I-neutral
 fruit I-neutral
@@ -2054,14 +2054,14 @@ fruit I-neutral
 correct I-neutral
 . I-neutral
 
-service I-neutral
+service B-positive
 tres I-neutral
 long I-neutral
 et I-neutral
 glacial I-neutral
 . I-neutral
 
-accueil I-neutral
+accueil B-positive
 souriant I-neutral
 , I-neutral
 service I-neutral
@@ -2078,14 +2078,14 @@ souvenir I-neutral
 de I-neutral
 paris I-neutral
 
-à I-neutral
+à O
 volonté I-neutral
 c'est I-neutral
 beaucoup I-neutral
 dire I-neutral
 . I-neutral
 
-nous I-neutral
+nous O
 nous I-neutral
 attendions I-neutral
 à I-neutral
@@ -2107,14 +2107,14 @@ plats I-neutral
 fades I-neutral
 . I-neutral
 
-aucune I-neutral
+aucune O
 explication I-neutral
 sur I-neutral
 les I-neutral
 plats I-neutral
 . I-neutral
 
-après I-neutral
+après O
 dégustation I-neutral
 c'est I-neutral
 le I-neutral
@@ -2130,11 +2130,11 @@ mon I-neutral
 ami I-neutral
 . I-neutral
 
-a I-neutral
+a O
 proscrire I-neutral
 ! I-neutral
 
-nous I-neutral
+nous O
 avons I-neutral
 signalé I-neutral
 au I-neutral
@@ -2155,7 +2155,7 @@ ferait I-neutral
 remonter I-neutral
 . I-neutral
 
-juste I-neutral
+juste O
 un I-neutral
 appel I-neutral
 pour I-neutral
@@ -2173,7 +2173,7 @@ de I-neutral
 tripadvisor I-neutral
 . I-neutral
 
-un I-neutral
+un O
 peu I-neutral
 d I-neutral
 ' I-neutral
@@ -2194,11 +2194,11 @@ obligent I-neutral
 ) I-neutral
 . I-neutral
 
-attente I-neutral
+attente B-negative
 interminable I-neutral
 ! I-neutral
 
-pour I-neutral
+pour O
 bien I-neutral
 connaitre I-neutral
 la I-neutral
@@ -2220,7 +2220,7 @@ cuisine I-neutral
 locale I-neutral
 . I-neutral
 
-le I-neutral
+le O
 personnel I-neutral
 est I-neutral
 attentionné I-neutral
@@ -2232,7 +2232,7 @@ et I-neutral
 discret I-neutral
 ... I-neutral
 
-2 I-neutral
+2 O
 heures I-neutral
 d I-neutral
 attentes I-neutral
@@ -2244,7 +2244,7 @@ patronne I-neutral
 execrable I-neutral
 ! I-neutral
 
-etait I-neutral
+etait O
 ce I-neutral
 la I-neutral
 fin I-neutral
@@ -2255,14 +2255,14 @@ voulait I-neutral
 cela I-neutral
 ? I-neutral
 
-l I-neutral
+l O
 ' I-neutral
 accueil I-neutral
 est I-neutral
 sympathique I-neutral
 . I-neutral
 
-dommage I-neutral
+dommage O
 , I-neutral
 car I-neutral
 le I-neutral
@@ -2271,7 +2271,7 @@ demeure I-neutral
 impressionnant I-neutral
 . I-neutral
 
-si I-neutral
+si O
 vous I-neutral
 allez I-neutral
 au I-neutral
@@ -2286,7 +2286,7 @@ endroit I-neutral
 idéal I-neutral
 . I-neutral
 
-si I-neutral
+si O
 vous I-neutral
 n'avez I-neutral
 pas I-neutral
@@ -2298,22 +2298,22 @@ de I-neutral
 l'emporter I-neutral
 ... I-neutral
 
-chantilly I-neutral
+chantilly O
 premier I-neutral
 prix I-neutral
 
-quelle I-neutral
+quelle O
 bonne I-neutral
 surprise I-neutral
 ! I-neutral
 
-service I-neutral
+service B-positive
 attentif I-neutral
 et I-neutral
 sympathique I-neutral
 . I-neutral
 
-on I-neutral
+on O
 attire I-neutral
 les I-neutral
 clients I-neutral
@@ -2346,7 +2346,7 @@ ou I-neutral
 d'audace I-neutral
 ... I-neutral
 
-il I-neutral
+il O
 dirige I-neutral
 ses I-neutral
 employés I-neutral
@@ -2356,7 +2356,7 @@ de I-neutral
 doigts I-neutral
 ... I-neutral
 
-des I-neutral
+des O
 plats I-neutral
 au I-neutral
 gout I-neutral
@@ -2367,7 +2367,7 @@ micro I-neutral
 ondes I-neutral
 ! I-neutral
 
-test I-neutral
+test O
 du I-neutral
 menu I-neutral
 à I-neutral
@@ -2404,7 +2404,7 @@ chimique I-neutral
 pas I-neutral
 bon I-neutral
 
-je I-neutral
+je O
 vous I-neutral
 passe I-neutral
 le I-neutral
@@ -2416,7 +2416,7 @@ sont I-neutral
 quelconque I-neutral
 . I-neutral
 
-situé I-neutral
+situé O
 dans I-neutral
 la I-neutral
 petite I-neutral
@@ -2441,13 +2441,13 @@ passée I-neutral
 colmar I-neutral
 . I-neutral
 
-le I-neutral
+le O
 service I-neutral
 s'est I-neutral
 dégradé I-neutral
 . I-neutral
 
-on I-neutral
+on O
 voit I-neutral
 que I-neutral
 l I-neutral
@@ -2464,7 +2464,7 @@ lieu I-neutral
 magique I-neutral
 . I-neutral
 
-le I-neutral
+le O
 confit I-neutral
 ne I-neutral
 ressemble I-neutral
@@ -2532,7 +2532,7 @@ recommande I-neutral
 ! I-neutral
 ! I-neutral
 
-une I-neutral
+une O
 ambiance I-neutral
 qui I-neutral
 se I-neutral
@@ -2557,7 +2557,7 @@ la I-neutral
 salle I-neutral
 . I-neutral
 
-un I-neutral
+un O
 beau I-neutral
 et I-neutral
 grand I-neutral
@@ -2580,7 +2580,7 @@ et I-neutral
 petits I-neutral
 . I-neutral
 
-nous I-neutral
+nous O
 ne I-neutral
 nous I-neutral
 attendions I-neutral
@@ -2622,7 +2622,7 @@ le I-neutral
 marché I-neutral
 ! I-neutral
 
-très I-neutral
+très O
 bien I-neutral
 pour I-neutral
 une I-neutral
@@ -2635,7 +2635,7 @@ samedi I-neutral
 soir I-neutral
 . I-neutral
 
-nous I-neutral
+nous O
 avons I-neutral
 choisi I-neutral
 ce I-neutral
@@ -2669,7 +2669,7 @@ fait I-neutral
 maison I-neutral
 . I-neutral
 
-je I-neutral
+je O
 suis I-neutral
 allé I-neutral
 il I-neutral
@@ -2686,7 +2686,7 @@ entre I-neutral
 amis I-neutral
 . I-neutral
 
-la I-neutral
+la O
 choucroute I-neutral
 , I-neutral
 le I-neutral
@@ -2715,7 +2715,7 @@ faire I-neutral
 mieux I-neutral
 . I-neutral
 
-toujours I-neutral
+toujours O
 très I-neutral
 original I-neutral
 , I-neutral
@@ -2732,7 +2732,7 @@ autre I-neutral
 part I-neutral
 . I-neutral
 
-le I-neutral
+le O
 bressane I-neutral
 est I-neutral
 ma I-neutral
@@ -2751,7 +2751,7 @@ parfois I-neutral
 approximative I-neutral
 . I-neutral
 
-un I-neutral
+un O
 oasis I-neutral
 de I-neutral
 calme I-neutral
@@ -2771,12 +2771,12 @@ est I-neutral
 vide I-neutral
 ! I-neutral
 
-très I-neutral
+très O
 bon I-neutral
 bistrot I-neutral
 . I-neutral
 
-de I-neutral
+de O
 plus I-neutral
 , I-neutral
 un I-neutral
@@ -2791,7 +2791,7 @@ restaurant I-neutral
 parisien I-neutral
 . I-neutral
 
-l I-neutral
+l O
 ' I-neutral
 accueil I-neutral
 est I-neutral
@@ -2803,7 +2803,7 @@ intime I-neutral
 plait I-neutral
 . I-neutral
 
-nous I-neutral
+nous O
 sommes I-neutral
 allés I-neutral
 diner I-neutral
@@ -2819,11 +2819,11 @@ sans I-neutral
 souci I-neutral
 ! I-neutral
 
-a I-neutral
+a O
 recommander I-neutral
 ! I-neutral
 
-terrasse I-neutral
+terrasse B-positive
 ensoleillée I-neutral
 le I-neutral
 dimanche I-neutral
@@ -2840,7 +2840,7 @@ plutôt I-neutral
 bien I-neutral
 ... I-neutral
 
-patron I-neutral
+patron B-positive
 venu I-neutral
 nous I-neutral
 voir I-neutral
@@ -2890,7 +2890,7 @@ après I-neutral
 appel I-neutral
 . I-neutral
 
-évitez I-neutral
+évitez O
 d'y I-neutral
 aller I-neutral
 en I-neutral
@@ -2904,7 +2904,7 @@ déjà I-neutral
 beaucoup I-neutral
 . I-neutral
 
-nous I-neutral
+nous O
 étions I-neutral
 5 I-neutral
 et I-neutral
@@ -2931,7 +2931,7 @@ les I-neutral
 entrées I-neutral
 . I-neutral
 
-je I-neutral
+je O
 suis I-neutral
 bien I-neutral
 conscient I-neutral
@@ -2966,7 +2966,7 @@ d'être I-neutral
 dénoncé I-neutral
 . I-neutral
 
-les I-neutral
+les O
 nems I-neutral
 sont I-neutral
 corrects I-neutral
@@ -3000,7 +3000,7 @@ le I-neutral
 gras I-neutral
 . I-neutral
 
-nous I-neutral
+nous O
 avons I-neutral
 vécu I-neutral
 une I-neutral
@@ -3011,13 +3011,13 @@ du I-neutral
 commun I-neutral
 . I-neutral
 
-a I-neutral
+a O
 recommander I-neutral
 1000 I-neutral
 fois I-neutral
 ! I-neutral
 
-lors I-neutral
+lors O
 du I-neutral
 festival I-neutral
 des I-neutral
@@ -3033,7 +3033,7 @@ cette I-neutral
 placette I-neutral
 . I-neutral
 
-nous I-neutral
+nous O
 nous I-neutral
 ferons I-neutral
 ensuite I-neutral
@@ -3056,11 +3056,11 @@ laisser I-neutral
 partir I-neutral
 . I-neutral
 
-quel I-neutral
+quel O
 gâchis I-neutral
 . I-neutral
 
-pas I-neutral
+pas O
 besoin I-neutral
 d'en I-neutral
 dire I-neutral
@@ -3071,7 +3071,7 @@ bar I-neutral
 est I-neutral
 affreux I-neutral
 
-nous I-neutral
+nous O
 sommes I-neutral
 dans I-neutral
 le I-neutral
@@ -3089,7 +3089,7 @@ plutôt I-neutral
 élevés I-neutral
 . I-neutral
 
-les I-neutral
+les O
 anciens I-neutral
 patrons I-neutral
 navaient I-neutral
@@ -3106,7 +3106,7 @@ rien I-neutral
 en I-neutral
 restauration I-neutral
 
-les I-neutral
+les O
 points I-neutral
 négatifs I-neutral
 sont I-neutral
@@ -3147,7 +3147,7 @@ l'entrée I-neutral
 ) I-neutral
 . I-neutral
 
-choisissez I-neutral
+choisissez O
 une I-neutral
 table I-neutral
 qui I-neutral
@@ -3161,7 +3161,7 @@ peintres I-neutral
 de I-neutral
 montmartre I-neutral
 
-accueil I-neutral
+accueil B-positive
 moyen I-neutral
 , I-neutral
 on I-neutral
@@ -3172,7 +3172,7 @@ le I-neutral
 personnel I-neutral
 . I-neutral
 
-l I-neutral
+l O
 ' I-neutral
 accueil I-neutral
 est I-neutral
@@ -3210,12 +3210,12 @@ pour I-neutral
 s'enthousiasmer I-neutral
 . I-neutral
 
-la I-neutral
+la O
 tarte I-neutral
 tatin I-neutral
 divine I-neutral
 
-bref I-neutral
+bref O
 , I-neutral
 le I-neutral
 repas I-neutral
@@ -3230,7 +3230,7 @@ pas I-neutral
 emballé I-neutral
 . I-neutral
 
-les I-neutral
+les O
 plats I-neutral
 arrivent I-neutral
 rapidement I-neutral
@@ -3275,7 +3275,7 @@ vous I-neutral
 servir I-neutral
 . I-neutral
 
-endroit I-neutral
+endroit B-positive
 sympa I-neutral
 en I-neutral
 plein I-neutral
@@ -3283,7 +3283,7 @@ centre I-neutral
 touristique I-neutral
 . I-neutral
 
-le I-neutral
+le O
 plat I-neutral
 du I-neutral
 jour I-neutral
@@ -3323,7 +3323,7 @@ et I-neutral
 froides I-neutral
 . I-neutral
 
-mais I-neutral
+mais O
 comment I-neutral
 peux I-neutral
 on I-neutral
@@ -3351,7 +3351,7 @@ ou I-neutral
 promocash I-neutral
 . I-neutral
 
-et I-neutral
+et O
 faites I-neutral
 le I-neutral
 détour I-neutral
@@ -3364,7 +3364,7 @@ et I-neutral
 généreux I-neutral
 . I-neutral
 
-vin I-neutral
+vin B-positive
 au I-neutral
 verre I-neutral
 ( I-neutral
@@ -3373,7 +3373,7 @@ heureusement I-neutral
 ) I-neutral
 . I-neutral
 
-cet I-neutral
+cet O
 endroit I-neutral
 mériterait I-neutral
 d'etre I-neutral
@@ -3390,12 +3390,12 @@ du I-neutral
 personnel I-neutral
 . I-neutral
 
-vraiment I-neutral
+vraiment O
 très I-neutral
 dépaysant I-neutral
 ! I-neutral
 
-les I-neutral
+les O
 vins I-neutral
 sont I-neutral
 bons I-neutral
@@ -3422,7 +3422,7 @@ est I-neutral
 sympathique I-neutral
 . I-neutral
 
-la I-neutral
+la O
 déco I-neutral
 pourrait I-neutral
 être I-neutral
@@ -3444,7 +3444,7 @@ très I-neutral
 souriante I-neutral
 . I-neutral
 
-de I-neutral
+de O
 l I-neutral
 ' I-neutral
 accueil I-neutral
@@ -3472,16 +3472,16 @@ par I-neutral
 là I-neutral
 . I-neutral
 
-bon I-neutral
+bon O
 accueil I-neutral
 
-la I-neutral
+la O
 tartiflette I-neutral
 était I-neutral
 correcte I-neutral
 . I-neutral
 
-ici I-neutral
+ici O
 , I-neutral
 la I-neutral
 cuisine I-neutral
@@ -3491,10 +3491,10 @@ est I-neutral
 l'honneur I-neutral
 . I-neutral
 
-une I-neutral
+une O
 honte I-neutral
 
-aussi I-neutral
+aussi O
 je I-neutral
 vous I-neutral
 conseille I-neutral
@@ -3514,7 +3514,7 @@ super I-neutral
 bon I-neutral
 . I-neutral
 
-les I-neutral
+les O
 prix I-neutral
 sont I-neutral
 trop I-neutral
@@ -3529,7 +3529,7 @@ a I-neutral
 proposé I-neutral
 . I-neutral
 
-le I-neutral
+le O
 maître I-neutral
 d'hôtel I-neutral
 méprisant I-neutral
@@ -3537,14 +3537,14 @@ et I-neutral
 grossier I-neutral
 . I-neutral
 
-un I-neutral
+un O
 rapport I-neutral
 qualité I-neutral
 prix I-neutral
 correct I-neutral
 . I-neutral
 
-en I-neutral
+en O
 raison I-neutral
 de I-neutral
 la I-neutral
@@ -3562,7 +3562,7 @@ salle I-neutral
 climatisée I-neutral
 . I-neutral
 
-accueil I-neutral
+accueil B-positive
 chaleureux I-neutral
 , I-neutral
 arrière I-neutral
@@ -3599,7 +3599,7 @@ prix I-neutral
 raisonnable I-neutral
 . I-neutral
 
-et I-neutral
+et O
 à I-neutral
 chaque I-neutral
 fois I-neutral
@@ -3628,7 +3628,7 @@ très I-neutral
 sympathique I-neutral
 . I-neutral
 
-un I-neutral
+un O
 cadre I-neutral
 simple I-neutral
 mais I-neutral
@@ -3650,13 +3650,13 @@ et I-neutral
 goût I-neutral
 . I-neutral
 
-la I-neutral
+la O
 nourriture I-neutral
 , I-neutral
 intolérable I-neutral
 ! I-neutral
 
-une I-neutral
+une O
 cuisine I-neutral
 simple I-neutral
 mais I-neutral
@@ -3667,7 +3667,7 @@ bons I-neutral
 produits I-neutral
 . I-neutral
 
-une I-neutral
+une O
 table I-neutral
 qui I-neutral
 tient I-neutral

@@ -35,6 +35,8 @@ if __name__ == "__main__":
         part4time = time.time()
         print("Finished part4 df in {}s".format(part4time - part3time))
 
+        print("    ---- ---- ----    \n")
+
         readfile = lang + "/dev.in"
 
         # part 2 tagging
@@ -69,6 +71,8 @@ if __name__ == "__main__":
 
         part4tagging = time.time()
         print("Finished tagging part4 in {}s".format(part4tagging - part3tagging))
+
+        print("====================\n")
 
     endtime = time.time()
     print("Finished everything in {}s".format(endtime - begintime))

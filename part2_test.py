@@ -6,6 +6,13 @@ import time
 
 class Test2b(unittest.TestCase):
 
+    def testSimpleDF(self):
+        m = model.Model('SG/train')
+        m.train()
+        df = part2.GetEmissionDataFrame(m, 1)
+        print(df)
+
+
     def testCompleteSmoothed(self):
         starttime = time.time()
         m = model.Model('SG/train')
