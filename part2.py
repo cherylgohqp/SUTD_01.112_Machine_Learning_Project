@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 
 
 def GetEmissionDataFrame(_model, _k=0):
@@ -31,33 +30,35 @@ def GetEmissionDataFrame(_model, _k=0):
             m.x_y_count['#UNK#'] = {}
             m.x_y_count['#UNK#'][wl[1]] = val
 
-    # create dataframe from emissions data
-    states = [state for state, _ in _model.y_count.items()]
-    words = [word for word, _ in _model.x_y_count.items()]
+    # # create dataframe from emissions data
+    # states = [state for state, _ in _model.y_count.items()]
+    # words = [word for word, _ in _model.x_y_count.items()]
+    #
+    # # create dataframe
+    # basic_shape = np.zeros((len(states), len(words)))
+    # df = pd.DataFrame(basic_shape, index=states, columns=words)
+    #
+    # for w in words:
+    #     for s in states:
+    #         # fill up column by column
+    #         try:
+    #             df.loc[s, w] = emissions[(w, s)]
+    #         except KeyError:
+    #             df.loc[s, w] = 0.0
 
-    # create dataframe
-    basic_shape = np.zeros((len(states), len(words)))
-    df = pd.DataFrame(basic_shape, index=states, columns=words)
-
-    for w in words:
-        for s in states:
-            # fill up column by column
-            try:
-                df.loc[s, w] = emissions[(w, s)]
-            except KeyError:
-                df.loc[s, w] = 0.0
-
-    return df
+    return emissions
 
 
-def findMax(_df_row):
-    max_label = 'O'
-    max_val = 0.00
-    for label, val in _df_row.items():
-        if float(val) > max_val:
-            max_label = label
-            max_val = float(val)
-    return max_label, max_val
+def findMax(_emission_df, word):
+    # print("finding max of:", word)
+
+    values_row = [(key, v) for key, v in _emission_df.items() if key[0] == word]
+
+    if not values_row:
+        values_row = [(key, v) for key, v in _emission_df.items() if key[0] == "#UNK#"]
+
+    # sort based on value and return first (max)
+    return sorted(values_row, key=lambda x: x[1], reverse=True)[0]
 
 
 def TagTweets(_out, _emission_df, _file):
@@ -73,16 +74,11 @@ def TagTweets(_out, _emission_df, _file):
     writer = open(_out, 'w', encoding='utf-8')
     for line in reader:
         word = line.strip()
-        try:
-            word_row = _emission_df.loc[word]
-            max_label, _ = findMax(word_row)
-        except KeyError:
-            if word == '':
-                max_label = ''
-            else:
-                max_label = 'O'
-        finally:
-            writer.write("{} {}\n".format(word, max_label))
+
+        max_tuple = findMax(_emission_df, word)  # ('word','sentiment')
+
+        max_label = max_tuple[0][1]
+        writer.write("{} {}\n".format(word, max_label))
 
 
 # if __name__ == '__main__':

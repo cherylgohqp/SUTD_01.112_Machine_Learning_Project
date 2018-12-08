@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 
-# TRY NOT TO USE THIS
+# Do not use this directly from outside this package
 def GenerateFile(_model, _generate=False):
     """
     Aims to create a dict to give transition probabilities

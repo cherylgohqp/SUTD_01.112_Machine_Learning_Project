@@ -19,8 +19,10 @@ def GenerateFile(_model):
         for prev_labels, count in y2.items():
             yi_1 = prev_labels[1]
             yi_2 = prev_labels[0]
-            value = count / (m.y_y1[yi_1][yi_2])  # P(yi | yi-2,yi-1) = Count(yi,yi-1,yi-2) / Count(yi-2, yi-1)
-            permutations[(prev_labels, yi)] = value  # will save in the form { ((yi-2,yi-1),yi): value }
+            # P(yi | yi-2,yi-1) = Count(yi,yi-1,yi-2) / Count(yi-2, yi-1)
+            value = count / (m.y_y1[yi_1][yi_2])
+            # will save in the form { ((yi-2,yi-1),yi): value }
+            permutations[(prev_labels, yi)] = value
 
     return permutations
 
