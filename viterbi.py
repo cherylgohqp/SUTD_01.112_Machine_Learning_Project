@@ -17,42 +17,40 @@ def Viterbi(_sentence, _model, _emission_df, _transition_df):
         return []
 
     # EXECUTE VITERBI
-    # Exclude start and stop from states - will not be needing them
     states = [state for state, _ in _model.y_count.items()]
-    states.remove("__START__")
-    states.remove("__STOP__")
 
     # keep table of values
     # (len(states) x len(sentence))
-    basic_shape = np.zeros((len(states), len(_sentence))) * np.nan
-    table1 = pd.DataFrame(basic_shape, index=states, columns=_sentence)
+    value_table = [[0 for x in range(len(_sentence) + 1)] for y in range(len(states))]
 
     # keep table of sequences
-    sequence_shape = np.empty((len(states), len(_sentence)), dtype=list)
-    seq_table = pd.DataFrame(sequence_shape, index=states, columns=_sentence)
+    sequence_table = [[[] for x in range(len(_sentence))] for y in range(len(states))]
 
     # base case - START to all states
     for i in range(len(states)):
         # transition prob from __START__ to anything
         try:
-            transition_prob = _transition_df.loc['__START__', table1.index[i]]
+            transition_prob = _transition_df[('__START__', states[i])]
         except KeyError:
-            transition_prob = 0
+            transition_prob = 0.0
 
         # error occurs here due to empty _sentence
         try:
-            emission_prob = _emission_df.loc[_sentence[0], table1.index[i]]
+            emission_prob = _emission_df[(_sentence[0], states[i])]
         except KeyError:
-            emission_prob = 0
+            emission_prob = 0.0
 
-        table1.iloc[i, 0] = float(transition_prob) * float(emission_prob)
-        seq_table.iloc[i, 0] = ['__START__', states[i]]
+        value_table[i][0] = float(transition_prob) * float(emission_prob)
+        sequence_table[i][0] = ['__START__', states[i]]
 
     # iterative/recursive case - state to state
     for i in range(1, len(_sentence)):
         for j in range(len(states)):
-            # find e(xi|yj)
-            emission_prob = float(_emission_df.loc[states[j], _sentence[i]])
+            try:
+                # find e(xi|yj)
+                emission_prob = float(_emission_df[(_sentence[i], states[j])])
+            except KeyError:
+                emission_prob = 0.0
 
             # find the max transition prob from prev
             max_val = 0
@@ -60,26 +58,38 @@ def Viterbi(_sentence, _model, _emission_df, _transition_df):
 
             # from state to state prob
             for k in range(len(states)):
-                prev_optimal = float(table1.iloc[k, i-1])
-                prev_state_seq = seq_table.iloc[k, i-1]
-                transition_prob = float(_transition_df.loc[states[k], states[j]])
+                prev_optimal = float(value_table[k][i-1])
+                prev_state_seq = sequence_table[k][i-1]
+                try:
+                    transition_prob = float(_transition_df[(states[k], states[j])])
+                except KeyError:
+                    transition_prob = 0.0
 
                 prob = prev_optimal * transition_prob * emission_prob
                 if max_val == 0 or prob > max_val:
                     max_val = prob
                     next_state_seq = prev_state_seq + [states[k]]
 
-            table1.iloc[j, i] = max_val
-            seq_table.iloc[j, i] = next_state_seq
+            value_table[j][i] = max_val
+            sequence_table[j][i] = next_state_seq
+
+        # end case - all states to __STOP__
+        for i in range(len(states)):
+            try:
+                transition_prob = _transition_df[(states[i], '__STOP__')]
+            except KeyError:
+                transition_prob = 0.0
+
+            value_table[i][-1] = float(transition_prob) * float(value_table[i][-2])
 
     # take optimal from table and return optimal val and sequence
     max_val = 0
     result_seq = []
     for i in range(len(states)):
-        prob = float(table1.iloc[i, len(_sentence) - 1])  # take all from last
+        prob = float(value_table[i][-1])  # take all from last
         if max_val == 0 or prob > max_val:
             max_val = prob
-            result_seq = seq_table.iloc[i, len(_sentence) - 1]
+            result_seq = sequence_table[i][-1]
 
     return result_seq[1:]
 
@@ -100,34 +110,43 @@ def Modified_Viterbi(_sentence, _model, _emission_df, _transition_df, _2nd_order
         return []
 
     # EXECUTE VITERBI
-    # Exclude start and stop from states - will not be needing them
     states = [state for state, _ in _model.y_count.items()]
-    states.remove("__START__")
-    states.remove("__STOP__")
 
-    # keep table of values:
+    # keep table of values
     # (len(states) x len(sentence))
-    basic_shape = np.zeros((len(states), len(_sentence))) * np.nan
-    table1 = pd.DataFrame(basic_shape, index=states, columns=_sentence)
+    value_table = [[0 for x in range(len(_sentence) + 1)] for y in range(len(states))]
 
     # keep table of sequences
-    sequence_shape = np.empty((len(states), len(_sentence)), dtype=list)
-    seq_table = pd.DataFrame(sequence_shape, index=states, columns=_sentence)
+    sequence_table = [[[] for x in range(len(_sentence))] for y in range(len(states))]
+
 
     # base case - START to all states, 1st order.
     # 2nd order not possible for base case
     for i in range(len(states)):
         # use 1st order, since 2nd order is non-existent
-        transition_prob = _transition_df.loc['__START__', table1.index[i]]
-        emission_prob = _emission_df.loc[_sentence[0], table1.index[i]]
-        table1.iloc[i, 0] = float(transition_prob) * float(emission_prob)
-        seq_table.iloc[i, 0] = ['__START__', states[i]]
+        # transition prob from __START__ to anything
+        try:
+            transition_prob = _transition_df[('__START__', states[i])]
+        except KeyError:
+            transition_prob = 0.0
+
+        # error occurs here due to empty _sentence
+        try:
+            emission_prob = _emission_df[(_sentence[0], states[i])]
+        except KeyError:
+            emission_prob = 0.0
+
+        value_table[i][0] = float(transition_prob) * float(emission_prob)
+        sequence_table[i][0] = ['__START__', states[i]]
 
     # iterative/recursive case - 2nd order
     for i in range(1, len(_sentence)):
         for j in range(len(states)):
-            # find e(xi|yj)
-            emission_prob = float(_emission_df.loc[states[j], _sentence[i]])
+            try:
+                # find e(xi|yj)
+                emission_prob = float(_emission_df[(states[j], _sentence[i])])
+            except KeyError:
+                emission_prob = 0
 
             # find the max transition prob from prev 2
             max_val = 0
@@ -135,16 +154,15 @@ def Modified_Viterbi(_sentence, _model, _emission_df, _transition_df, _2nd_order
 
             # from state to state prob
             for k in range(len(states)):
-                prev_optimal = float(table1.iloc[k, i-1])
-                prev_state_seq = seq_table.iloc[k, i-1]
+                prev_optimal = float(value_table[k][i-1])
+                prev_state_seq = sequence_table[k][i-1]
 
                 prev_1 = prev_state_seq[len(prev_state_seq) - 1]
                 prev_2 = prev_state_seq[len(prev_state_seq) - 2]
 
                 # use 2nd order here - modified
                 try:
-                    transition_prob = float(_2nd_order_df.loc[states[k],
-                                                              [(prev_2, prev_1)]])
+                    transition_prob = float(_2nd_order_df[((prev_2, prev_1), states[k])])
                 except KeyError:
                     transition_prob = 0.0
 
@@ -153,17 +171,31 @@ def Modified_Viterbi(_sentence, _model, _emission_df, _transition_df, _2nd_order
                     max_val = prob
                     next_state_seq = prev_state_seq + [states[k]]
 
-            table1.iloc[j, i] = max_val
-            seq_table.iloc[j, i] = next_state_seq
+            value_table[j][i] = max_val
+            sequence_table[j][i] = next_state_seq
+
+    # end case - all states to __STOP__
+    for i in range(len(states)):
+
+        prev_optimal = float(value_table[i][-2])
+        prev_state_seq = sequence_table[i][-1]
+        prev_1 = prev_state_seq[len(prev_state_seq) - 1]
+        prev_2 = prev_state_seq[len(prev_state_seq) - 2]
+        try:
+            transition_prob = float(_2nd_order_df[((prev_2, prev_1), '__STOP__')])
+        except KeyError:
+            transition_prob = 0.0
+
+        value_table[i][-1] = float(transition_prob) * float(value_table[i][-2])
 
     # take optimal from table and return optimal val and sequence
     max_val = 0
     result_seq = []
     for i in range(len(states)):
-        prob = float(table1.iloc[i, len(_sentence) - 1])  # take all from last
+        prob = float(value_table[i][-1])  # take all from last
         if max_val == 0 or prob > max_val:
             max_val = prob
-            result_seq = seq_table.iloc[i, len(_sentence) - 1]
+            result_seq = sequence_table[i][-1]
 
     return result_seq[1:]
 
@@ -171,6 +203,7 @@ def Modified_Viterbi(_sentence, _model, _emission_df, _transition_df, _2nd_order
 def TagWithViterbi(_out, _file, _model, _emission_df, _transition_df, _2nd_order_df=None):
     """
     Takes in the file to be tagged and generates a new one
+    NOTE THAT ALL DFs HAVE BEEN CHANGED TO HASHMAPS
     :param _out: output file name
     :param _file: file with no labels
     :param _model: trained model to be used
