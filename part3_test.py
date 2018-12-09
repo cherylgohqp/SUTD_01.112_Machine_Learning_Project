@@ -1,7 +1,7 @@
 import unittest
 import part3
 import model
-import part2
+import part2helper
 import viterbi
 import time
 
@@ -23,7 +23,7 @@ class Test3(unittest.TestCase):
         readfile = "testdata/small_test"
 
         # Emission dataframe from part 2
-        em_df = part2.GetEmissionDataFrame(m, 1)
+        em_df = part2helper.GetEmissionDataFrame(m, 1)
 
         # 1st order transition dataframe from part 3
         tr_df = part3.GetTransitionDataFrame(m)
@@ -44,7 +44,7 @@ class Test3(unittest.TestCase):
     def testEmission(self):
        m = model.Model('SG/train')
        m.train()
-       df = part2.GetEmissionDataFrame(m)
+       df = part2helper.GetEmissionDataFrame(m)
        print('emission prob:\n\n', df.loc['not'])
 
        tr_df = part3.GetTransitionDataFrame(m)

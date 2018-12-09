@@ -1,5 +1,5 @@
 from model import Model
-import part2
+import part2helper
 import part3
 import part4
 import viterbi
@@ -18,7 +18,7 @@ if __name__ == "__main__":
         print("Finished training {} in {}s".format(lang, starttime-traintime))
 
         # Emission dataframe from part 2
-        em_df = part2.GetEmissionDataFrame(m, 1)
+        em_df = part2helper.GetEmissionDataFrame(m, 1)
 
         part2time = time.time()
         print("Finished part2 df in {}s".format(part2time - traintime))
@@ -40,7 +40,7 @@ if __name__ == "__main__":
         readfile = lang + "/dev.in"
 
         # part 2 tagging
-        part2.TagTweets(
+        part2helper.TagTweets(
             _out=lang+"/dev.part2.out",
             _emission_df=em_df,
             _file=readfile

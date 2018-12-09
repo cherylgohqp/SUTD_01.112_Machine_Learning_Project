@@ -1,5 +1,5 @@
 import unittest
-import part2
+import part2helper
 import model
 import time
 
@@ -9,7 +9,7 @@ class Test2b(unittest.TestCase):
     def testSimpleDF(self):
         m = model.Model('SG/train')
         m.train()
-        df = part2.GetEmissionDataFrame(m, 1)
+        df = part2helper.GetEmissionDataFrame(m, 1)
         print(df)
 
 
@@ -20,12 +20,12 @@ class Test2b(unittest.TestCase):
 
         midtime = time.time()
         print("Trained in {}s".format(midtime-starttime))
-        df = part2.GetEmissionDataFrame(m, 1)
+        df = part2helper.GetEmissionDataFrame(m, 1)
         endtime = time.time()
         print("Finished in {}s".format(endtime-starttime))
         # print("Final emission:", df)
 
-        part2.TagTweets('testdata/part2test.out', df, 'testdata/small_test')
+        part2helper.TagTweets('testdata/part2test.out', df, 'testdata/small_test')
         endtime2 = time.time()
         print("done with tagging in {}s".format(endtime2 - endtime))
 

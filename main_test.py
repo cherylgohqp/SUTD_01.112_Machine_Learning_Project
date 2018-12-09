@@ -1,7 +1,7 @@
 import unittest
 import part3
 import model
-import part2
+import part2helper
 import pandas as pd
 import viterbi
 import part4
@@ -16,9 +16,9 @@ class TestFullMethods(unittest.TestCase):
         readfile = "testdata/small_test"
 
         # Emission dataframe from part 2
-        em_df = part2.GetEmissionDataFrame(m, 1)
+        em_df = part2helper.GetEmissionDataFrame(m, 1)
 
-        part2.TagTweets(
+        part2helper.TagTweets(
             _out='testdata/part2_out.txt',
             _emission_df=em_df,
             _file=readfile
@@ -31,7 +31,7 @@ class TestFullMethods(unittest.TestCase):
         readfile = "testdata/small_test"
 
         # Emission dataframe from part 2
-        em_df = part2.GetEmissionDataFrame(m, 1)
+        em_df = part2helper.GetEmissionDataFrame(m, 1)
 
         # 1st order transition dataframe from part 3
         tr_df = part3.GetTransitionDataFrame(m)
@@ -52,7 +52,7 @@ class TestFullMethods(unittest.TestCase):
         readfile = "testdata/small_test"
 
         # Emission dataframe from part 2
-        em_df = part2.GetEmissionDataFrame(m, 1)
+        em_df = part2helper.GetEmissionDataFrame(m, 1)
 
         # 1st order transition dataframe from part 3
         tr_df = part3.GetTransitionDataFrame(m)
@@ -80,7 +80,7 @@ class TestFullMethods(unittest.TestCase):
         readfile = "testdata/small_test"
 
         # Emission dataframe from part 2
-        em_df = part2.GetEmissionDataFrame(m, 1)
+        em_df = part2helper.GetEmissionDataFrame(m, 1)
 
         # 1st order transition dataframe from part 3
         tr_df = part3.GetTransitionDataFrame(m)
@@ -89,7 +89,7 @@ class TestFullMethods(unittest.TestCase):
         tr_2_df = part4.GetTransitionDataFrame(m)
 
         # part 2 tagging
-        part2.TagTweets(
+        part2helper.TagTweets(
             _out='testdata/part2_out.txt',
             _emission_df=em_df,
             _file=readfile
